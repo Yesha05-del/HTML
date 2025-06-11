@@ -4,7 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Form</title>
-    <h2>Contact Form</h2>
+    <style>
+      
+ .div{
+  background-color: gray;
+  box-shadow:  2px 2px 5px black;
+ }
+ table{
+  margin: 0 auto;
+ }
+      button{
+        background-color: greenyellow;
+      }
+    </style>
+    <div class="div">
+      <h2 text align="center" style="background-color: gray;">Contact Form</h2>
+    
     <table>
         <form method=""  enctype="multipart/form-data">
           <tr>
@@ -14,7 +29,7 @@
               </label>
               </td>
               <td>
-             <input type="text" id="name" pattern="[Aa-Zz]" / >
+             <input type="text" id="name" pattern="[A-Z][a-z]+" >
               
             </td>
           </tr>
@@ -27,7 +42,7 @@
               </label>
               </td>
               <td>
-             <input type="email" id="email" / >
+             <input type="email" id="email" >
               
             </td>
           </tr>
@@ -38,7 +53,7 @@
               </label>
               </td>
               <td>
-             <input type="tel" id="phone number" pattern="+[0-9]{10}" / >
+             <input type="tel" id="phone number" pattern="[0-9]{10}+" >
               
             </td>
           </tr>
@@ -77,6 +92,8 @@
         
         </form>
     </table>
+      </div>
 </head>
 <body>
-   
+ 
+    
