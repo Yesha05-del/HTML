@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <link rel="shortcut icon" href="images/ubereats_logo.png" type="image/x-icon">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: sans-serif;
+    }
+  
+
+
+    .container {
+      background-color: white;
+      padding: 10px 20px;
+    }
+    .main{
+            background: url('https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQnpNUopIi3_FxvTsJovPOoGfeLNhsJnYZHgxyOEAKotYU_-AA4');
+            background-repeat: no-repeat;
+            background-size: contain;
+            padding: 20px;
+            height: 600px;
+             width: 100%;
+            background-size: cover;
+            margin: 0px;
+        }
+
+    .row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .left-side {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    summary {
+      list-style: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    .left-side img {
+      width: 110px;
+    }
+
+    .right-side {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .right-side a {
+      text-decoration: none;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .ride-link {
+      color: black;
+      background: transparent;
+    }
+
+    .login-link {
+      color: black;
+      background-color: white;
+      border: 1px solid black;
+    }
+
+    .signup-link {
+      color: white;
+      background-color: black;
+    } 
+
+
+
+
+.tr{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap:40px;
+            padding: 20px;
+        }
+        .td{
+               flex: 1 1 30%;
+      max-width: 32%;
+      min-width: 280px;
+
+            width: 300px;
+            height: auto;
+            text-align: center;
+            padding: 10px;
+            border-radius: 6px;
+
+        }
+        .td h2{
+              font-size: 26px;
+      margin-top: 16px;
+      margin-bottom: 8px;
+     text-align: left;
+     
+        }
+        .td a{
+        color:black;
+      text-decoration: underline;
+      font-size: 16px;
+     text-align: left;
+      
+        }
+        p{
+            margin: 10px 0;
+        }
+.map h1{
+
+  padding: 20px;
+}
+.map a{
+  display: flex;
+   padding: 20px;
+   text-align: right;
+   color: black;
+
+}
+.city {
+      padding: 40px;
+      background-color: #fff;
+    }
+   .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+ color: #000;
+}
+
+
+    .country {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .country h2 {
+      font-size: 32px;
+      margin: 0;
+    }
+
+    .country a {
+      font-size: 16px;
+      color: #000;
+      text-decoration: underline;
+    }
+
+    .map-image img {
+      width: 100%;
+      max-width: 100%;
+      border-radius: 8px;
+    }
+
+     
+
+    
+    .city-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  gap: 60px;
+  flex-wrap: wrap;
+  position: relative;
+}
+    .column{
+     display: flex;
+      flex-direction: column;
+      gap: 30px; 
+      padding: 20px;
+    }
+.column  row{
+  padding: 20px;
+}
+  img{
+    size: 10px;
+  }
+  .order{
+    margin-top: 100px;
+  }
+.mainb{
+  display: flex;
+  gap: 800px;
+
+}.mainb1{
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: end;
+ 
+}
+.box1{
+  display: flex; 
+  gap: 10px;
+}
+.box2{
+  display: flex; 
+  gap: 10px;
+}
+ .box3{
+  display: flex; 
+  gap: 10px;
+}
+.cha{
+  
+ display: flex;
+ flex-direction: column;
+  gap: 20px;
+}
+.col{
+  /* display: flex;    */
+ flex-direction: column;
+}
+.btn{
+  display: flex;
+}
+  </style>
+   
+<body>
+   <div class="container main">
+    <div class="row">
+      <div class="left-side">
+        <details>
+          <summary><i class="fa-solid fa-bars"></i></summary>
+        </details>
+        <img src="images/ubersvg.png" alt="Uber Eats Logo" />
+      </div>
+      <div class="right-side">
+        <a href="#" class="ride-link">Get a ride</a>
+        <a href="#" class="login-link">Log in</a>
+        <a href="#" class="signup-link">Sign up</a>
+           </div>
+       
+      </div>
+        <div class="order">
+                   <div class="row">
+            <div class="col">
+                <h1>Order delivery near you</h1>
+            </div>
+        </div>
+          
+        <div class="row">
+            <div class="col">
+                <input type="text" placeholder="Enter delivery address">
+                <select name="" id="">
+                    <option value="">Deliver now</option>
+                    <option value="">Schedule for later</option>
+                </select>
+                <button>Search here</button>
+            </div>
+        </div>  
+        <div class="row">  
+            <div class="col">
+                Or <a href="">Sign in</a>
+            </div>
+        </div>    
+    </div>
+    </div>
+  </div>
+
+      
+
+     
+ <div class="table">
+        <div class="tr">
+            <div class="td"><img src="https://www.ubereats.com/_static/88d55f7112efe55f.webp" width="100%">
+              <h2>Feed your employees</h2>
+              <a href="">Create a business account</a>
+        </div>
+              <div class="td"><img src="https://www.ubereats.com/_static/711d51ca1b458931.webp" width="100%" >
+            <h2>Your resturant , delivered</h2>
+            <a href="">Add Your Resturant</a>
+        </div>
+              <div class="td"><img src="https://www.ubereats.com/_static/16522a701585873b.webp" width="100%">
+           <h2>Deliver with Uber Eats</h2>
+            <a href="">Sign up to deliver</a>
+        </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+     <div class="city">
+    <div class="header">
+      <h2>Cities near me</h2>
+      <a href="#">View all 500+ cities</a>
+    </div>
+    <div class="map-image">
+      <img src="images/Screenshot (41).png" alt="Map with cities">
+  <div class="city-list">
+    <div class="column">
+      <div>Akron</div>
+      <div>Albuquerque</div>
+      <div>Bridgeport</div>
+      <div>Concord</div>
+      <div>Dayton</div>
+      <div>Dayton</div>
+    </div>
+     <div class="column">
+      <div>Hartford</div>
+      <div>Houston</div>
+      <div>Indianapolis</div>
+      <div>McAllen</div>
+      <div>Mesa</div>
+      <div>Milwaukee</div>
+    </div>
+    <div class="column">
+      <div>Nashville</div>
+      <div>New Orleans</div>
+      <div>Oklahoma City</div>
+      <div>Omaha</div>
+      <div>Orlando</div>
+      <div>Palm Bay</div>
+    </div>
+    <div class="column">
+      <div>Providence</div>
+      <div>Queens</div>
+      <div>San Antonio</div>
+      <div>Stony Brook</div>
+      <div>Tucson</div>
+      <div>West Hollywood</div>
+    </div>
+  </div>
+ 
+    </div>
+  </div>
+     <div class="city">
+    <div class="country">
+      <h2>Countries with Uber Eats</h2>
+      <a href="#" style="color: #000;">View all countries</a>
+     
+  </div>
+    </div>
+  <div class="city-list">
+    <div class="column">
+      <div>Australia</div>
+     <div>Belgium</div>
+     <div>Canada</div>
+     <div>Chile</div>
+     <div>Costa Rica</div>
+     <div>Dominican Republic</div>
+     <div>Ecuador</div>
+     <div>El Salvador</div>
+    </div>
+     <div class="column">
+      <div>France</div>
+      <div>Germany</div>
+      <div>Guatemala</div>
+      <div>Ireland</div>
+      <div>Italy</div>
+      <div>Japan</div>
+      <div>Kenya</div>
+      <div>Luxembourg</div>
+     </div>
+    <div class="column">
+     <div>Mexico</div>
+     <div>Netherlands</div>
+     <div>New Zealand</div>
+     <div>Panama</div>
+     <div>Poland</div>
+     <div>Portugal</div>
+     <div>South Africa</div>
+     <div>Spain</div>
+    </div>
+    <div class="column">
+      <div>Sri Lanka</div>
+      <div>Sweden</div>
+      <div>Switzerland</div>
+      <div>Taiwan (ROC)</div>
+      <div>United Kingdom</div>
+      <div>United States</div>
+      
+    </div>
+    <hr>
+  
+    <div class="container">
+      <div class="row">
+        <div class="col">
+        <img src="images/ubersvg.png" alt="">
+        <img src="https://www.ubereats.com/_static/783bb4a82e5be29e.svg" alt="" width="130px">
+      <img src="https://www.ubereats.com/_static/163bdc9b0f1e7c9e.png" alt="" width="130px">
+      </div>
+<div class="row">
+  
+  
+ <div class="cha">
+    <div class="col"><a href="">Get Help</a></div>
+       <div class="col"><a href="">Buy Gift cards</a></div>
+          <div class="col"><a href="">Add Your resturant</a></div>
+             <div class="col"><a href="">Sign up to deliver</a></div>
+                <div class="col"><a href="">Create a business account</a></div>
+                   <div class="col"><a href="">Promotions</a></div>
+   </div>
+    <div class="cha">
+     <div class="col"><a href="">Resturants near me</a></div>
+       <div class="col"><a href="">View all cities</a></div>
+          <div class="col"><a href="">View all countries</a></div>
+             <div class="col"><a href="">Pick up near me</a></div>
+                <div class="col"><a href="">About Uber Eats</a></div>
+                   <div class="col"><a href="">Shop Groceries</a></div>
+                     <div class="col"><a href="">English</a></div>
+   </div>
+      </div>
+    
+
+    </div>
+  
+  
+  
+ 
+   </div>
+      <hr>
+
+    <div class="mainb" >
+        <div class="box1">
+            <div class="col">sign</div>
+            <div class="col">sign</div>
+            <div class="col">sign</div>
+        </div>
+      <div class="mainb1">
+      
+        <div class="sub">
+        <div class="box2">
+            <div class="col"><a href="">lorem1</a></div>
+            <div class="col"><a href="">lorem2</a></div>
+            <div class="col"><a href="">lorem3</a></div>
+            <div class="col"><a href="">lorem4</a></div>
+        </div>
+
+            <div class="box3">
+            <div class="col">Lorem ipsum dolor sit amet.</div>
+            <div class="col">@2025, copyright Lorem, ipsum dolor.</div>
+        </div>
+        </div>
+      </div>
+        </div>
+
+        
+    </div>
+
+ 
+    
+</body>
+</html>
