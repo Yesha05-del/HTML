@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+               * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    body{
+        background: linear-gradient(to right,#38b6ff,#8e2de2);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+    .container{
+        background: white;
+        padding: 40px;
+        max-width: 900px;
+        width: 90%;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+    h2{
+        text-align: center;
+        font-size: 24px;
+           background: linear-gradient(to right,#38b6ff,#8e2de2);
+           background-clip: text;
+           color: transparent;
+           margin-bottom: 30px;
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .row{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .input{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+    label{
+        margin-bottom: 5px;
+        font-size: 14px;
+        color: #38b6ff;
+    }
+    input,textarea{
+        border: none;
+        border-bottom: 2px solid #ccc;
+        padding: 10px;
+        font-size: 16px;
+
+    }
+    input:focus,textarea:focus{
+        outline: none;
+        border-bottom: 2px solid #38b6ff;
+    }
+    .full-width{
+        flex: 1 0 100%;
+    }
+    button{
+            margin-top: 10px;
+      padding: 12px;
+      background: linear-gradient(to right, #38b6ff, #8e2de2);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+ 
+      width: 150px;
+      align-self: center;
+
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2> Responsive <strong>Contact us</strong> Form </h2>
+        <form action="">
+            <div class="row">
+                <div class="input">
+                    <label for="">First Name</label>
+                    <input type="text" name="first name" pattern="+[a-z][A-Z]">
+                </div>
+                 <div class="input">
+                    <label for="">Last Name</label>
+                    <input type="text" name="last name" pattern="+[a-z][A-Z]">
+                </div>
+            </div>
+             <div class="row">
+                <div class="input">
+                    <label for="">Email Address</label>
+                    <input type="email" required>
+                </div>
+                 <div class="input">
+                    <label for="">Website Name</label>
+                    <input type="text" name="website name" required>
+                </div>
+             </div>
+             <div class="row">
+                <div class="input full-width">
+                    <label for="">Write your message</label>
+                    <textarea name="" id="" rows="4" required></textarea>
+                </div>
+
+             </div>
+             <button type="submit">SUBMIT</button>
+        </form>
+    </div>
+</body>
+</html>
