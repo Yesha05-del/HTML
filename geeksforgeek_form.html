@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <style>
+                  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      
+    }
+           body {
+      font-family: Arial, sans-serif;
+      background-color: #b2dfdb;
+      margin: 0;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      color: green;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .form-container {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 30px 25px;
+      max-width: 400px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .form-header {
+      color: green;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      justify-content: center;
+      font-weight: bold;
+    }
+
+    .input-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .input-label {
+      color: green;
+      font-weight: 600;
+      margin-bottom: 5px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #999;
+      outline: none;
+      font-size: 14px;
+    }
+
+    textarea {
+      resize: vertical;
+      height: 80px;
+    }
+
+    .radio-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 600;
+      color: green;
+    }
+
+    button {
+      background-color: green;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 20px;
+      
+      font-size: 16px;
+    }
+      </style>
+</head>
+<body>
+    <h1>GeeksforGeeks</h1>
+    <h2>Feedback Form using HTML and CSS</h2>
+    <form action="">
+    <div class="form-container">
+        <div class="form-header">
+               <i class="fas fa-info-circle"></i> It only takes two minutes!!
+        </div>
+        <div class="input-group">
+             <label class="input-label"><i class="fas fa-user"></i> Name</label>
+      <input type="text" name="Name" pattern="+[a-z][A-Z]">
+        </div>
+         <div class="input-group">
+         <label class="input-label"><i class="fas fa-envelope"></i>Email Address</label>
+      <input type="email" required>
+      </div>
+      <div class="input-group">
+      <label class="input-label"><i class="fas fa-phone"></i> Phone No</label>
+      <input type="number" pattern="+[0-9]{10}">
+    </div>
+    <div class="input-group">
+      <label class="input-label"><i class="fas fa-smile"></i> Do you satisfy with our service?</label>
+      <div class="radio-group">
+        <input type="radio" name="satisfaction" id="yes">
+        <label for="yes">Yes</label>
+        <input type="radio" name="satisfaction" id="no">
+        <label for="no">No</label>
+      </div>
+    </div>
+    <div class="input-group">
+      <label class="input-label"><i class="fas fa-comment-dots"></i> Write your Suggestions:</label>
+      <textarea></textarea>
+    </div>
+     <button type="submit">SUBMIT</button>
+    </div>
+</form>
+</body>
+</html>
