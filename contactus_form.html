@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Form</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #00bcd4, #4dd0e1);
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 50px auto;
+      background-color: white;
+      border-radius: 8px;
+      overflow: hidden;
+      display: flex;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+
+    .form-section {
+      flex: 2;
+      padding: 40px;
+    }
+
+    .form-section h2 {
+      margin-bottom: 20px;
+      color: #01579b;
+    }
+
+    .form-group {
+      display: flex;
+      margin-bottom: 20px;
+      gap: 10px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .captcha {
+      margin-bottom: 20px;
+    }
+
+    button {
+      background-color: #0288d1;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+
+    
+
+    .side-banner {
+      flex: 1;
+      background: url('https://cdn.dribbble.com/users/1415336/screenshots/3810931/media/278b5a6991d0eb81ff8c1a3387553c48.png') no-repeat center;
+      background-size: cover;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+   
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="form-section">
+      <h2>Contact form</h2>
+<form action="">
+      <div class="form-group">
+         <div style="flex: 1;">
+          <label>Your Name</label>
+          <input type="text" name="firstname" placeholder="First Name" pattern="+[A-Z][a-z]" required>
+       </div>
+        <div style="flex: 1;">
+          <label>&nbsp;</label>
+          <input type="text" name="lastname" placeholder="Last Name" pattern="+[A-Z][a-z]" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div style="flex: 1;">
+          <label>Your Email</label>
+          <input type="email" placeholder="e.g. hello@contact.net" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div style="flex: 1;">
+          <label>Phone*</label>
+          <input type="number" placeholder="###" pattern="+[0-9]{10}" required>
+        </div>
+        <div style="flex: 1;">
+          <label>&nbsp;</label>
+          <input type="text" placeholder="###">
+        </div>
+        <div style="flex: 1;">
+          <label>&nbsp;</label>
+          <input type="text" placeholder="####">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div style="flex: 1;">
+          <label>Message Subject *</label>
+          <select>
+            <option>Other</option>
+            <option>Support</option>
+            <option>Sales</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div style="flex: 1;">
+          <label>Message *</label>
+          <textarea></textarea>
+        </div>
+      </div>
+
+      <div class="form-group captcha">
+        <label>Verification *</label>
+        <div>
+          <input type="checkbox"> I'm not a robot
+          <img src="https://www.gstatic.com/recaptcha/api2/logo_48.png" alt="" width="20px">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <button type="submit">SUBMIT FORM</button>
+      </div>
+    </div>
+
+    <div class="side-banner"></div>
+  </div>
+  </form>
+</body>
+</html>
