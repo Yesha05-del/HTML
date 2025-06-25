@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+            * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+       body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: black;
+      color: white;
+      align-items: center;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 40px;
+    }
+
+    .card-container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .card {
+      background-color: #1e1e2f;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+      overflow: hidden;
+      width: 100%;
+      max-width: 350px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-image {
+      height: 180px;
+      width: 100%;
+      background-size: cover;
+      background-position: center;
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 1.25rem;
+      text-align: left;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      color: #ccc;
+      line-height: 1.5;
+      text-align: left;
+    }
+   .las-vegas{
+    background-image: linear-gradient(to top right , #ff00cc88 , #3333ff88) , url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqO8vMvXGgRNLq3cjjtEXJ-aJySRzZ5Mlo0A&s');
+   
+   }
+   .new-york {
+      background-image: linear-gradient(to top right, #00fff888, #00cccc88), url('https://img.freepik.com/free-photo/manhattan-skyline_649448-1559.jpg?semt=ais_hybrid&w=740');
+    }
+
+    .singapore {
+      background-image: linear-gradient(to top right, #ffa50088, #ff450088), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnOoL7LXkBtjPrX4oWzReopjoqPKUzXVEbPA&s');
+    }
+
+    .footer {
+      margin-top: 50px;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    </style>
+</head>
+<body>
+    <h1>RESPONSIVE CARDS</h1>
+    <div class="card-container">
+        <div class="card">
+            <div class="card-image las-vegas"></div>
+            <div class="card-content">
+            <h3>Las Vegas</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus animi reiciendis tempore doloremque expedita possimus, eligendi, maxime illum vero laborum voluptatibus illo neque, vitae fugit ab sequi modi! Tempora, obcaecati! </p>
+       </div>
+        </div>
+         <div class="card">
+            <div class="card-image new-york"></div>
+            <div class="card-content">
+            <h3>New York</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus animi reiciendis tempore doloremque expedita possimus, eligendi, maxime illum vero laborum voluptatibus illo neque, vitae fugit ab sequi modi! Tempora, obcaecati! </p>
+       </div>
+        </div>
+         <div class="card">
+            <div class="card-image singapore"></div>
+            <div class="card-content">
+            <h3>Singapore</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus animi reiciendis tempore doloremque expedita possimus, eligendi, maxime illum vero laborum voluptatibus illo neque, vitae fugit ab sequi modi! Tempora, obcaecati! </p>
+       </div>
+        </div>
+        <div class="footer">▶ FLEXBOX BASED LAYOUT ◀</div>
+</body>
+</html>
