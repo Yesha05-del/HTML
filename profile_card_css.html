@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: rgb(192, 233, 250);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .card{
+            width: 350px;
+            height: 200px;
+            background-color:  #e8f7fd;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin: 80px auto;
+            position: relative;
+     
+        }
+        .card::before {
+            content: "";
+            position: absolute;
+            top:0;
+            right: 0;
+            width: 80px;
+            height: 80px;
+            background-color: #6b7dfc;
+            border-bottom-left-radius: 100px;
+
+
+        }
+        .profile-pic{
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            border: 3px solid white;
+        }
+        .info {
+      margin-left: 100px;
+      margin-top: -90px;
+    }
+    .name {
+      font-weight: bold;
+      font-size: 18px;
+      margin: 0;
+    }
+    .username {
+      
+      font-size: 14px;
+      margin: 2px 0;
+    }
+     .description {
+      font-size: 14px;
+      margin: 10px 0 15px;
+   
+    }
+    .stats{
+        display: flex;
+        gap:30px;
+        flex-direction: row;
+       justify-content: center;
+    }
+  .stat .number {
+      font-weight: bold;
+    }
+    .buttons{
+        display: flex;
+        gap:10px;
+        justify-content: center;
+        
+    }
+    .btn {
+       width: 150px;
+       height: 40px;
+ padding: 8px 0;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+     .follow {
+      background-color: #000;
+      color: #fff;
+    }
+     .view {
+      background-color: #fff;
+      color: #000;
+      border: 1px solid #999;
+    }
+     
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img class="profile-pic" src="images/WhatsApp Image 2025-01-01 at 11.36.44 AM.jpeg" alt="profile">
+        <div class="info">
+            <p class="name">Yesha</p>
+            <p class="username">@yesha</p>
+                  <p class="description">I'm a Front End Developer, follow me to be the first who see my new work.</p>
+
+        </div>
+        <div class="stats">
+            <div class="stat">
+                 <div class="number">15K</div>
+        <div class="label">Views</div>
+            </div>
+             <div class="stat">
+                 <div class="number">82</div>
+        <div class="label">projects</div>
+            </div>
+                  <div class="stat">
+                 <div class="number">1.3M</div>
+        <div class="label">Followers</div>
+            </div>
+        </div>
+        <div class="buttons">
+        <button class="btn follow">Follow</button>
+          <button class="btn view">View Profile</button>
+          </div>
+    </div>
+</body>
+</html>
