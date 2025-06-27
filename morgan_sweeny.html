@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <style>
+    body {
+      margin: 0;
+      background: linear-gradient(45deg, #f88cab, #d993f5);
+      font-family: Arial, sans-serif;
+    }
+    .card {
+      width: 300px;
+      background: #fff;
+      border-radius: 20px;
+      margin: 50px auto;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      overflow: hidden;
+    }
+    .card-header {
+      height: 150px;
+      background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk5GZuOnd6F9QPtjffyzxz72Jjy5O_8OxZ9g&s');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+    .profile-img {
+      width: 100px;
+      height: 100px;
+      background: #fff;
+      border-radius: 50%;
+      position: absolute;
+      bottom: -50px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    .profile-img img {
+      width: 60px;
+      height: 60px;
+    }
+    .card-body {
+      padding: 60px 20px 20px;
+      text-align: center;
+    }
+    .name {
+      font-weight: bold;
+      font-size: 18px;
+      color: #333;
+      margin-bottom: 5px;
+    }
+    .title {
+      color: #999;
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+    .stats {
+      display: table;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    .stat {
+      display: table-cell;
+      text-align: center;
+    }
+    .stat-number {
+      color: #2196f3;
+      font-weight: bold;
+      font-size: 18px;
+    }
+    .stat-label {
+      display: block;
+      color: #aaa;
+      font-size: 12px;
+      margin-top: 4px;
+    }
+    .btn {
+      display: inline-block;
+      background: #ffdb2d;
+      padding: 10px 30px;
+      border-radius: 20px;
+      color: #333;
+      font-weight: bold;
+      text-decoration: none;
+      margin-bottom: 15px;
+    }
+    .description {
+      font-size: 13px;
+      color: #444;
+      padding: 0 10px 20px;
+      line-height: 1.5;
+    }
+    .menu-icon {
+      width: 20px;
+      height: 4px;
+      background: #333;
+      border-radius: 2px;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+    .menu-icon::before,
+    .menu-icon::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 4px;
+      background: #333;
+      border-radius: 2px;
+      left: 0;
+    }
+    .menu-icon::before {
+      top: -8px;
+    }
+    .menu-icon::after {
+      top: 8px;
+    }
+  </style>
+</head>
+<body>
+      <div class="card">
+    <div class="card-header">
+      <div class="menu-icon"></div>
+      <div class="profile-img">
+        <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQ6DM1NSPjKf9duVeYivu7xkmRAUegw2eCv2gSNCP4oES4AJwoM" alt="avatar" />
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="name">Morgan Sweeney</div>
+      <div class="title">Ant Collector</div>
+      <div class="stats">
+        <div class="stat">
+          <span class="stat-number">12</span>
+          <span class="stat-label">Followers</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">1000</span>
+          <span class="stat-label">Following</span>
+        </div>
+      </div>
+      <a href="#" class="btn">Follow</a>
+      <div class="description">
+        Morgan has collected ants since they were six years old and now has many dozen ants but none in their pants.
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
