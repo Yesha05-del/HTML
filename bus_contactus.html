@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(#cfdfe8, #f2e4d8),url('https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTDkh0wXIkTEvAhhC_5ORqg9ZbS1_V3L_Lv68tuH6wWgQonlzQG');
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      width: 800px;
+      max-width: 95%;
+      margin: 50px auto;
+      background: #fff;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      display: table;
+    }
+    .left {
+      display: table-cell;
+      width: 50%;
+      vertical-align: top;
+    }
+    .left img {
+      width: 100%;
+      height: 100%;
+     
+      display: block;
+    }
+    .right {
+      
+      width: 100%;
+      padding: 40px;
+      box-sizing: border-box;
+      vertical-align: top;
+    }
+    .right h2 {
+      margin-top: 0;
+      text-align: center;
+      font-size: 24px;
+      color: #333;
+      position: relative;
+      display: inline-block;
+    }
+    .right h2::after {
+      content: "";
+      display: block;
+      height: 4px;
+      width: 50px;
+      background: #23c483;
+      margin: 8px auto 0 auto;
+      border-radius: 2px;
+    }
+    .right input,
+    .right textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      background: #f2f2f2;
+      font-size: 14px;
+      box-sizing: border-box;
+    }
+    .right textarea {
+      height: 100px;
+      resize: none;
+    }
+    .right button {
+      width: 100%;
+      padding: 12px;
+      background: #23c483;
+      border: none;
+      color: #fff;
+      font-size: 16px;
+    }
+    </style>
+</head>
+<body>
+      <div class="container">
+    <div class="left">
+      <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTDkh0wXIkTEvAhhC_5ORqg9ZbS1_V3L_Lv68tuH6wWgQonlzQG" alt="Van Image" />
+    </div>
+    
+    <div class="right">
+      <h2>Contact Us</h2>
+      <form>
+        <input type="text" placeholder="Your Name" pattern="+[a-z]" required />
+        <input type="email" placeholder="Your Email" required />
+        <input type="text" placeholder="Phone" pattern="+[0-9]{10}"  required/>
+        <textarea placeholder="Message"></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
