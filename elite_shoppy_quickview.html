@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.tr{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            
+            gap: 50px;
+            padding: 20px;
+        }
+
+ .td{
+    
+            width: 280px;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 3px 3px 10px black;
+            position: relative;
+        }
+        .td:hover img{
+            transform: rotateY(180deg);
+        }
+        p{
+            margin: 10px 0;
+            background-color: black;
+            color: white;
+            width: 90%;
+            padding: 5px;
+            font-size: 20px;
+            position: absolute;
+            text-align: center;
+            top: 0;
+            opacity: 0;
+            transition: 0.5s;
+        }
+        .td:hover p{
+            top: 260px;
+            opacity: 1;
+        }
+        img{
+        transition: 0.5s;
+    }
+    </style>
+</head>
+<body>
+    <div class="table">
+        <div class="tr">
+            <div class="td">
+                <img src="https://p.w3layouts.com/demos_new/template_demo/20-06-2017/elite_shoppy-demo_Free/1660570665/web/images/m1.jpg" alt="">
+                <p>Quick View</p>
+                <h4 style="color:palevioletred;">Formal Blue Shirt</h4>
+                $45.99<del>$69.71</del>
+                                <button style="width: 150px; background-color: aqua; color: white;">Add to cart</button>
+            </div>
+              <div class="td">
+                <img src="https://p.w3layouts.com/demos_new/template_demo/20-06-2017/elite_shoppy-demo_Free/1660570665/web/images/m2.jpg" alt="">
+                <p>Quick View</p>
+                <h4 style="color:palevioletred;">Formal Blue Shirt</h4>
+                $45.99  <del> $69.71 </del>
+                <button style="width: 150px; background-color: aqua; color: white;">Add to cart</button>
+            </div>
+        </div>
+         
+          
+       
+    </div>
+</body>
+</html>
