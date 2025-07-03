@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+  a{
+    height: 50px;
+    width: 50px;
+   
+    display: block;
+    margin: 100px auto;
+            position: relative;
+            transition: 0.5s;
+            transform-style: preserve-3d;
+}
+.front,.back{
+  
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      
+}
+
+.front{
+    height: inherit;
+    width: inherit;
+   background-color: #efeff1; 
+    position: absolute;
+    transform: rotateX(90deg) translateZ(50px) ;
+}
+.back{
+    height: inherit;
+    width: inherit;
+    
+     background-color:rgb(68, 163, 240); 
+    position: absolute;
+    transform: translateZ(50px);
+}
+a:hover{
+    transform: rotateX(-90deg);
+}
+  </style>
+</head>
+<body>
+  <a href="">
+    <div class="front"><i class="fa-brands fa-twitter" style="color: #000000;"></i></div>
+    <div class="back"><i class="fa-brands fa-twitter" style="color: #fafafa;"></i></div>
+  </a>
+</body>
+</html>
