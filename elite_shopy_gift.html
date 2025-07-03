@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+          *{
+            margin: 0;padding: 0;border-radius: border-box;
+        }
+        .box{
+            background-color: black;
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+
+        }
+        .effect{
+            height: inherit;
+            width: inherit;
+            background-color: aqua;
+            transform: scale(0);
+            transition: 0.50s;
+        }
+        .box:hover .effect{
+          transform: scale(1);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="effect"></div>
+    </div>
+</body>
+</html>
