@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 420px;
+            height: 220px;
+            background: url('https://p.w3layouts.com/demos_new/template_demo/20-06-2017/elite_shoppy-demo_Free/1660570665/web/images/bot_2.jpg');
+            background-size: 100% 100%;
+            margin: 100px auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .effect1{
+           width: inherit;
+           height: inherit;
+           position: absolute;
+           background-color:rgba(43, 43, 45, 0.43);
+           top: 100%;
+           left: -100%;
+           transition: 1s;
+        }
+          .effect2{
+           width: inherit;
+           height: inherit;
+           position: absolute;
+           background-color: rgba(43, 43, 45, 0.43);
+           top: -100%;
+           left: 100%;
+           transition: 1s;
+        }
+        .box:hover .effect1 , .box:hover .effect2{
+            left: 0;
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+   <div class="box">
+    <div class="effect1"></div>
+    <div class="effect2"></div>
+   </div>
+</body>
+</html>
