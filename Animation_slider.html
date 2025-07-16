@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .slider{
+    height: 550px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+  .slide-1{
+    height: inherit;
+    width: inherit;
+    left: 0;
+    background: url('https://nurimetin.github.io/eliteshoppy.github.io/images/banner1.jpg');
+    position: absolute;
+   animation: slider 12s infinite;
+  }
+   .slide-2{
+    height: inherit;
+    width: inherit;
+    left: 100%;
+    background: url('https://nurimetin.github.io/eliteshoppy.github.io/images/bot_2.jpg');
+    position: absolute;
+       animation: slider 12s infinite;
+    
+  }
+   .slide-5{
+    height: inherit;
+    width: inherit;
+    left: 400%;
+    background: url('https://nurimetin.github.io/eliteshoppy.github.io/images/banner3.jpg');
+    position: absolute;
+       animation: slider 12s infinite;
+    
+  }
+  .slide-3{
+    height: inherit;
+    width: inherit;
+    left: 200%;
+    position: absolute;
+    background: url('https://nurimetin.github.io/eliteshoppy.github.io/images/banner4.jpg');
+       animation: slider 12s infinite;
+  }
+   .slide-4{
+    height: inherit;
+    width: inherit;
+    left: 300%;
+    position: absolute;
+   background: url('https://nurimetin.github.io/eliteshoppy.github.io/images/top2.jpg');
+   animation: slider 12s infinite;
+  }
+  @keyframes slider{
+    0%{
+      transform: translateX(0);
+    }
+    25%{
+      transform: translateX(-100%);
+    }
+ 50%{
+      transform: translateX(-200%);
+    }
+     75%{
+      transform: translateX(-300%);
+    }
+     100%{
+      transform: translateX(-400%);
+    }
+  }
+  </style>
+</head>
+<body>
+  <div class="slider">
+  <div class="slide-1"></div>
+  <div class="slide-2"></div>
+  <div class="slide-3"></div>
+  <div class="slide-4"></div>
+  <div class="slide-5"></div>
+  </div>
+</body>
+</html>
