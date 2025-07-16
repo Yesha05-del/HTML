@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box{
+        background-color: red;
+        font-size: 40px;
+        display: none;
+    }
+    @media(max-width: 1200px){
+        .Box1{
+            display: block;
+        }
+    }
+     @media(max-width: 900px){
+        .Box2{
+            display: block;
+        }
+        .Box1{
+            display: none;
+        }
+    }
+    @media (max-width: 400px) {
+        .Box3{
+            display: block;
+        }
+        .Box1,.Box2{
+            display: none;
+        }
+    }
+      @media (max-width: 300px) {
+        .Box4{
+            display: block;
+        }
+        .Box1,.Box2,.Box3{
+            display: none;
+        }
+    }
+      @media (max-width: 200px) {
+        .Box5{
+            display: block;
+        }
+        .Box1,.Box2,.Box3,.Box4{
+            display: none;
+        }
+    }
+      @media (max-width: 150px) {
+        .Box6{
+            display: block;
+        }
+        .Box1,.Box2,.Box3,.Box4,.Box5{
+            display: none;
+        }
+    }
+</style>
+<body>
+    <div class="box Box1">I am a Big Computer</div>
+    <div class="box Box2">I am Computer</div>
+    <div class="box Box3">I am Laptop</div>
+    <div class="box Box4">I am Ipad</div>
+    <div class="box Box5">I am Mobile</div>
+    <div class="box Box6">I am Small Mobile</div>
+</body>
+</html>

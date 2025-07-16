@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+   body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      color: #fff;
+    }
+
+    .top-bar {
+      background: #333;
+      color: #fff;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .top-bar .left {
+      font-weight: bold;
+      color: #8dc63f;
+    }
+
+    .top-bar .right button {
+      background: #8dc63f;
+      color: #fff;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 3px;
+    
+      font-size: 14px;
+    }
+
+    .hero {
+      background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c'); 
+      background-size: cover;
+      background-position: center;
+      height: 600px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .navbar {
+      background: #fff;
+      padding: 15px 30px;
+      border-radius: 40px;
+      display: inline-flex;
+      align-items: center;
+      gap: 30px;
+      position: absolute;
+      top: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      font-size: 14px;
+      padding: 5px 10px;
+      border-radius: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .navbar a.active {
+      background: #d9534f;
+      color: #fff;
+    }
+
+    .navbar a:hover {
+      background: #d9534f;
+      color: #fff;
+    }
+
+    .hero-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      max-width: 800px;
+      padding: 20px;
+    }
+
+    .hero-content h4 {
+      font-size: 14px;
+      letter-spacing: 2px;
+      margin: 0 0 10px;
+    }
+
+    .hero-content h1 {
+      font-size: 64px;
+      line-height: 1.2;
+      font-weight: bold;
+      margin: 0 0 20px;
+    }
+
+    .hero-content p {
+      font-size: 16px;
+      margin-bottom: 30px;
+      color: #eee;
+    }
+
+    .hero-content .btn {
+      border: 2px solid #fff;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 30px;
+      border-radius: 30px;
+      font-weight: bold;
+      display: inline-block;
+    }
+
+    .icons {
+      position: absolute;
+      top: 40px;
+      right: 40px;
+      display: flex;
+      gap: 20px;
+    }
+
+    .icon-circle {
+      width: 24px;
+      height: 24px;
+      background: #fff;
+      border-radius: 50%;
+      display: inline-block;
+    }
+    @media(max-width:1200px){
+        .navbar{
+            display: none;
+        }
+        .icons{
+            display: block;
+        }
+    }
+</style>
+<body>
+  <div class="top-bar">
+    <div class="left"><img src="images/furniture_app_logo.webp" alt="" width="20px">envato market</div>
+    <div class="right">
+      <button>Buy now</button>
+    </div>
+  </div>
+
+
+  <div class="hero">
+    <div class="navbar">
+      <a href="#" class="active">Home</a>
+      <a href="#">Shop</a>
+      <a href="#">Pages</a>
+      <a href="#">Mega</a>
+      <a href="#">Blog</a>
+      <a href="#">Contact</a>
+    </div>
+
+   <div class="logo">
+    <img src="https://demo2.pavothemes.com/aunuca/wp-content/uploads/2025/02/logo-min.png" alt="">
+   </div>  
+   <i class="fas fa-search"></i>
+   <i class="fa-regular fa-heart"></i>
+   <i class="fa-solid fa-cart-plus"></i>
+   <i class="fa-regular fa-user"></i>
+    </div>
+
+    
+    <div class="hero-content">
+      <h4>NEW FOR THE SEASON</h4>
+      <h1>Give Your Living<br>Room New Life</h1>
+      <p>Any project, any budget and it’s 100% free!</p>
+      <a href="#" class="btn">Shop Now →</a>
+    </div>
+
+  </div>
+</body>
+</html>

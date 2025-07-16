@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .img{
+            display: none;
+            height: inherit;
+            width: inherit;
+            /* border: 2px solid black; */
+        }
+        @media(max-width:310px){
+            .img1{
+                display: block;
+            }
+        }
+         @media(max-width:300px){
+            .img2{
+                display: block;
+            }
+            .img1{
+                display: none;
+            }
+        }
+         @media(max-width:272px){
+            .img3{
+                display: block;
+            }
+            .img1,.img2{
+                display: none;
+            }
+        }
+    </style>
+   
+</head>
+<body>
+    <div class="img img1"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbNE2qoC_Wx2xLJn69oOGpkSQReAOdPlRaxg&s" alt=""></div>
+    <div class="img img2"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvimPzwOXCXDCFyo4gygMnyo_C3kJ6XoGCDQ&s" alt=""></div>
+    <div class="img img3"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTl37Ha8cXj2c-sdAN1bfoPl31dXDgypc55Kw&s" alt=""></div>
+</body>
+</html>
