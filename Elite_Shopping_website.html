@@ -1,0 +1,1558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+
+    .top-header {
+      background: #000;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 0;
+      font-size: 16px;
+    }
+
+    .top-header .item {
+      display: flex;
+      align-items: center;
+      margin: 0 30px;
+    }
+
+    .top-header .item i {
+      color: #4ee4cf;
+      margin-right: 8px;
+      font-size: 18px;
+    }
+
+    .top-header .item a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .top-header .item a:hover {
+      text-decoration: underline;
+    }
+
+    .middle-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background: #fff;
+    }
+
+    .search-bar {
+      display: flex;
+      flex-wrap: wrap;
+      border: 1px solid #ccc;
+    }
+
+    .search-bar input {
+      border: none;
+      padding: 10px;
+      outline: none;
+    }
+
+    .search-bar button {
+      background-color: #1abc9c;
+      border: none;
+      color: white;
+      padding: 10px 15px;
+      cursor: pointer;
+    }
+
+    .logo {
+      font-size: 36px;
+      
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo span {
+      background: #000;
+      color: #fff;
+      padding: 10px 15px;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .social-icons {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .social-icons span {
+      font-size: 14px;
+    }
+
+    .social-icons .social {
+      height: 30px;
+      width: 30px;
+      display: block;
+      position: relative;
+      transition: 0.5s;
+      transform-style: preserve-3d;
+    }
+
+    .social-icons .front,
+    .social-icons .back {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 14px;
+    }
+
+    .social-icons .front {
+      background-color: #efeff1;
+      color: #000;
+      transform: rotateX(90deg) translateZ(15px);
+    }
+
+    .social-icons .back {
+      background-color: #1abc9c;
+      color: #fff;
+      transform: translateZ(15px);
+    }
+
+    .social-icons .facebook .back {
+      background-color: #3b5998;
+    }
+
+    .social-icons .twitter .back {
+      background-color: #00acee;
+    }
+
+    .social-icons .instagram .back {
+      background-color: #f87b2e;
+    }
+
+    .social-icons .linkedin .back {
+      background-color: #f41b1b;
+    }
+
+    .social-icons .social:hover {
+      transform: rotateX(-90deg);
+    }
+
+    nav {
+      background: #000;
+      height: 100px;
+    }
+
+    .nav-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      gap: 80px;
+    }
+
+    .nav-links li {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+       
+    }
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      padding: 15px 0;
+      font-weight: 500;
+      font-size: x-large;
+      height: fit-content;
+      align-items: center;
+      justify-content: center;
+     
+    }
+
+    .nav-links .line {
+      width: 0;
+      height: 2px;
+      background-color: #1abc9c;
+      transition:  0.5s;
+    }
+
+    .nav-links li:hover .line {
+      width: 100%;
+    }
+
+    .cart-icon {
+      background: #1abc9c;
+      width: 300px;
+      height: 100px;
+      margin-left: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+    }
+     .slider {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.3);
+}
+
+.content {
+  position: relative;
+  text-align: center;
+  color: #fff;
+  z-index: 2;
+}
+
+.content h2 {
+  font-size: 60px;
+  letter-spacing: 10px;
+}
+
+.content h2 span {
+  color: #1dd2af;
+  font-weight: bold;
+}
+
+.content p {
+  font-size: 24px;
+  color: #ffc107;
+  margin: 20px 0;
+  letter-spacing: 5px;
+}
+
+button {
+  display: inline-block;
+  position: relative;
+  background: #1dd2af;
+  color: #fff;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-size: 20px;
+  
+  border: none;
+  transition: 0.5s;
+   outline-offset: -2px;
+   font-weight: 700;
+            padding: 7px 13px;
+}
+
+ button:hover{
+            outline: 5px solid  #1dd2af;
+            outline-offset: 5px;
+            
+            
+
+        }
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 40px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 3;
+  padding: 10px;
+}
+
+.prev {
+  left: 20px;
+}
+
+.next {
+  right: 20px;
+}
+ .box-container{
+          display: flex;
+          flex-wrap: wrap;
+          
+        }
+        .box-1{
+            height: 300px;
+            width: 550px;
+            background: url('https://nurimetin.github.io/eliteshoppy.github.io/images/bottom1.jpg');
+            margin: 100px auto;
+            background-size: 100% 100%;
+            color: white;
+           position: relative;
+            padding: 20px;
+            background-position: -20px 0;
+            transition: 0.5s;
+        }
+        .box-2{
+            height: 300px;
+            width: 550px;
+            
+            background: url('https://nurimetin.github.io/eliteshoppy.github.io/images/bottom2.jpg');
+            margin: 100px auto;
+            background-size: 100% 100%;
+            color: white;
+           
+            position: relative;
+            padding: 20px;
+            background-position: -20px 0;
+            transition: 0.5s;
+        }
+       .p{
+            font-size: 30px;
+            letter-spacing: 5px;
+            position: absolute;
+            top: 90px;
+            left: 280px;
+
+        }
+        .p::first-letter{
+            color: red;
+
+        }
+        .newarrival{
+              height: 180px;
+            width: 350px;
+            border: 10px solid white;
+            padding: 70px 0 0 150px;
+            font-size: 20px;
+            letter-spacing: 5px;
+            transform: translateX(-10px);
+            opacity: 0;
+            transition: 0.5s;
+            position: absolute;
+            top:50px;
+            
+
+        }
+        .box-1:hover .newarrival{
+            transform: translateX(20px);
+            opacity: 1;
+           
+        }
+        .box-1:hover{
+            background-position: 0;
+        }
+         .box-2:hover .newarrival{
+            transform: translateX(20px);
+            opacity: 1;
+           
+        }
+        .box-2:hover{
+            background-position: 0;
+        }
+         .promo-section {
+      display: flex;
+      width: 100%;
+      background: #ffffff;
+    }
+
+    .promo-image {
+      flex: 1;
+    }
+
+    .promo-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .promo-content {
+      flex: 1;
+      background: #2ed8b6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 50px;
+      position: relative;
+    }
+
+    .promo-box {
+      background: #ffffff;
+      padding: 50px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      max-width: 600px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .promo-box h2 {
+      font-size: 28px;
+      font-weight: 700;
+      color: #333;
+      margin-bottom: 20px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .promo-box h2 span {
+      color: #ff5c5c;
+    }
+
+    .promo-box p {
+      color: #666;
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 40px;
+    }
+
+    .stats {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      text-align: center;
+    }
+
+    .stat-item {
+      flex: 1;
+    }
+
+    .stat-item i {
+      color: #2ed8b6;
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .stat-item .label {
+      font-size: 14px;
+      letter-spacing: 1px;
+      color: #333;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .stat-item .value {
+      font-size: 32px;
+      font-weight: 700;
+      color: #333;
+    }
+    .container {
+      display: flex;
+      gap: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .left,
+    .right-top,
+    .right-bottom {
+      position: relative;
+      background-size: 110% 110%;
+      background-position: center;
+      background-repeat: no-repeat;
+      overflow: hidden;
+      transition: background-position 0.5s ease;
+      
+    }
+
+    .left {
+      flex: 2;
+      height: 700px;
+      width: 40px;
+      background-image: url('https://nurimetin.github.io/eliteshoppy.github.io/images/bb1.jpg'); 
+    }
+
+    .right {
+      flex: 2;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .right-top,
+    .right-bottom {
+      height: 300px;
+      width: 600px;
+    }
+
+    .right-top {
+      background-image: url('https://nurimetin.github.io/eliteshoppy.github.io/images/bottom3.jpg');
+    }
+
+    .right-bottom {
+      background-image: url('https://nurimetin.github.io/eliteshoppy.github.io/images/bottom4.jpg');
+    }
+
+    .label {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      color: white;
+      font-size: 24px;
+      letter-spacing: 3px;
+      font-weight: bold;
+      z-index: 2;
+    }
+
+    .label span:first-child {
+      color: red;
+    }
+
+    
+
+    .left:hover,
+    .right-top:hover,
+    .right-bottom:hover {
+      background-position: right;
+    }
+
+    .left:hover .trending,
+    .right-top:hover .trending,
+    .right-bottom:hover .trending {
+      transform: translateX(0);
+      opacity: 1;
+    }
+     .a{
+            font-size: 30px;
+            letter-spacing: 5px;
+            position: absolute;
+            top: 90px;
+            left: 460px;
+            color: #fff;
+
+        }
+        .a::first-letter{
+            color: red;
+
+        }
+        .trending{
+              height: 700px;
+            width: 570px;
+            border: 6px solid rgb(255, 254, 254);
+            color: #fff;
+            /* padding: 30px 0 0 0; */
+            font-size: 20px;
+            letter-spacing: 5px;
+            transform: translateX(-10px);
+            opacity: 0;
+            transition: 0.5s;
+            position: absolute;
+            top:50px;
+           
+        }
+        .trending a{
+          position: absolute;
+          top: 80px;
+          left: 350px;
+        }
+         .wrapper {
+      width: 100vw;
+      margin: 0 auto;
+      white-space: nowrap;
+      font-size: 0; 
+    }
+    .box {
+      width: 50vw;
+      height: 400px;
+      display: inline-block;
+      position: relative;
+      overflow: hidden;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      vertical-align: top;
+    }
+    .effect1,
+    .effect2 {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background-color: rgba(43, 43, 45, 0.43);
+      top: 100%;
+      left: -100%;
+      transition: 1s;
+    }
+    .effect2 {
+      top: -100%;
+      left: 100%;
+    }
+    .box:hover .effect1,
+    .box:hover .effect2 {
+      top: 0;
+      left: 0;
+    }
+    .text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      font-size: 32px;
+      letter-spacing: 5px;
+      font-weight: bold;
+      white-space: nowrap;
+    }
+    .text span {
+      color: #50e3c2;
+    }
+      .title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .title h2 {
+      font-size: 36px;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+    .nav {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .nav a {
+      display: inline-block;
+      margin: 0 20px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      font-size: 18px;
+      padding: 10px 20px;
+      position: relative;
+    }
+    .nav a.active,
+    .nav a:hover {
+      background: #f56262;
+      color: #fff;
+    }
+    .nav a.active::after,
+    .nav a:hover::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: -8px;
+      width: 0;
+      height: 0;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-top: 8px solid #f56262;
+      transform: translateX(-50%);
+    }
+.price {
+      margin: 5px 0;
+      font-size: 18px;
+    }
+    .price del {
+      color: #999;
+      margin-left: 8px;
+      font-size: 16px;
+    }
+    .table{
+      padding: 40px;
+    }
+   .tr{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            
+            gap: 50px;
+            padding: 20px;
+        }
+
+ .td{
+    
+            width: 220px;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 3px 3px 10px black;
+            position: relative;
+        }
+        .td img{
+          width: 220px;
+        }
+        .td:hover img{
+            transform: rotateY(180deg);
+        }
+        p{
+            margin: 10px 0;
+            background-color: black;
+            color: white;
+            width: 80%;
+            padding: 5px;
+            font-size: 20px;
+            position: absolute;
+            text-align: center;
+            top: 0;
+            opacity: 0;
+            transition: 0.5s;
+        }
+        .td:hover p{
+            top: 260px;
+            opacity: 1;
+        }
+        img{
+        transition: 0.5s;
+    }
+    .btn {
+      width: 150px;
+      background-color: #1abc9c;
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 10px;
+     
+    }
+     .hero {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+       background-image: url('https://nurimetin.github.io/eliteshoppy.github.io/images/banner3.jpg');
+      background-size: cover;
+      background-position: center;
+      overflow: hidden;
+    }
+
+    .hero-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: white;
+    }
+
+    .hero-content h1 {
+      font-size: 40px;
+      font-weight: bold;
+      letter-spacing: 4px;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+    }
+
+    .hero-content h1 span {
+      color: black;
+    }
+
+    .shop-btn {
+      margin-top: 30px;
+      display: inline-block;
+      background-color: aqua;
+      border: none;
+      color: white;
+      font-weight: 700;
+      padding: 10px 25px;
+      font-size: 1.2em;
+      cursor: pointer;
+      outline-offset: -2px;
+      transition: 0.5s;
+      text-decoration: none;
+    }
+
+    .shop-btn:hover {
+      outline: 5px solid aqua;
+      outline-offset: 5px;
+    }
+       .icon-container {
+      display: flex;
+      width: 100%;
+    }
+
+    .icon-cart {
+      display: flex;
+      align-items: center;
+      width: 25%; 
+      padding: 20px;
+    
+    }
+
+    .icon-box {
+    position: relative;
+      width: 60px;
+      height: 60px;
+      background-color: #111;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      margin-right: 15px;
+    }
+
+    .icon-box i {
+      color: white;
+      font-size: 24px;
+      z-index: 2;
+    }
+
+    .icon-box .effect {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: darkcyan;
+      transform: scale(0);
+      transition: 0.3s ease;
+      z-index: 1;
+    }
+
+    .icon-box:hover .effect {
+      transform: scale(1);
+    }
+
+    .text-box h4 {
+   width: calc(100% - 75px);
+    color: #1dc7b8;
+      font-size: 12px;
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+    }
+
+    .text-box p {
+    color: #333;
+      font-size: 13px;
+      line-height: 1.4;
+      word-break: break-word;
+    }
+    
+    .footer {
+      width: 100%;
+      padding: 50px 80px;
+      background-color: #000;
+      box-sizing: border-box;
+    }
+
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .footer-col {
+      width: 23%;
+    }
+
+    .footer-col h3 {
+      color: #fff;
+      margin-bottom: 20px;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-col ul li {
+      margin-bottom: 10px;
+    }
+
+    .footer-col ul li a {
+      color: #aaa;
+      text-decoration: none;
+    }
+
+    .footer-col ul li a:hover {
+      color: #1dc7b8;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 10px;
+      margin-top: 30px;
+    }
+
+    .social-icons a {
+      height: 40px;
+      width: 40px;
+      position: relative;
+      transition: 0.5s;
+      transform-style: preserve-3d;
+      display: block;
+    }
+
+    .front, .back {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 18px;
+    }
+
+    .front {
+      background: #efeff1;
+      transform: rotateX(90deg) translateZ(20px);
+    }
+
+    .back {
+      background: #3b5998; 
+      color: white;
+      transform: translateZ(20px);
+    }
+
+    .social-icons a:hover {
+      transform: rotateX(-90deg);
+    }
+
+    .twitter .back { background: #1da1f2; }
+    .instagram .back { background: #e4405f; }
+    .linkedin .back { background: #0077b5; }
+
+    .footer-col p {
+      line-height: 1.6;
+      color: #888;
+      font-size: 14px;
+    }
+
+    .store-info i {
+      margin-right: 10px;
+    }
+
+    .flickr {
+      display: grid;
+      grid-template-columns: repeat(3, 50px);
+      gap: 10px;
+    }
+
+    .flickr img {
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+      border: 2px solid #fff;
+    }
+
+    .newsletter {
+      margin-top: 50px;
+      padding-top: 30px;
+      border-top: 1px solid #222;
+    }
+
+    .newsletter h2 {
+      color: #fff;
+      letter-spacing: 2px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .newsletter-form {
+      display: flex;
+      width: 100%;
+      max-width: 600px;
+    }
+
+    .newsletter-form input {
+      flex-grow: 1;
+      padding: 12px 20px;
+      border: none;
+      background: #1a1a1a;
+      color: #fff;
+      font-size: 16px;
+    }
+
+    .newsletter-form button {
+      background: #1dc7b8;
+      color: #fff;
+      padding: 12px 25px;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+     .treding h1{
+    text-align: center;
+    margin-top: 100px;
+    font-size: 40px;
+ }
+  .treding .card{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+   flex-wrap: wrap;
+ }
+  .box3{
+            height: 600px;
+            width: 500px;
+            background: url('https://nurimetin.github.io/eliteshoppy.github.io/images/bb1.jpg');
+             margin: 50px 10px; 
+            background-size: 100% 100%;
+            color: white;
+            position: relative;
+            padding: 20px;
+            background-position: -20px 0;
+            transition: 0.5s;
+        }
+        .divbg{
+            height: 570px;
+            width: 460px;
+            padding: 10px;
+             background:linear-gradient(rgba(0, 0, 0, 0.25),rgba(0, 0, 0, 0.25)) ;
+           
+        }
+      .box3 .p{
+            font-size: 30px;
+            letter-spacing: 5px;
+            position: absolute;
+            top: 70px;
+            left: 350px;
+            
+
+        }
+      .box3  .p::first-letter{
+            color: red;
+
+        }
+      .box3  .new{
+            height: 420px;
+            width: 350px;
+           
+             padding: 90px 0 0 290px; 
+             font-family: bold;
+            font-size: 22px;
+            letter-spacing: 2px;
+            transform: translateX(-10px);
+            opacity: 0;
+            transition: 0.5s;
+
+        }
+        .box3:hover .new{
+            transform: translateX(20px);
+            opacity: 1;
+           
+        }
+        .box3:hover{
+            background-position: 0;
+        }
+  
+        .twobox .box4{
+            height: 300px;
+            width: 700px;
+            background: url('https://nurimetin.github.io/eliteshoppy.github.io/images/bottom3.jpg');
+             margin: 30px 10px;
+            background-size: 100% 100%;
+            color: white;
+            position: relative;
+            padding: 20px;
+            background-position: -20px 0;
+            transition: 0.5s;
+        }
+       .box4 .divbg{
+            height: 270px;
+            width: 650px;
+            padding: 10px;
+             background:linear-gradient(rgba(0, 0, 0, 0.25),rgba(0, 0, 0, 0.25)) ;
+        }
+      .box4 .p{
+            font-size: 30px;
+            letter-spacing: 5px;
+            position: absolute;
+            top: 70px;
+            left: 350px;
+            
+
+        }
+      .box4  .p::first-letter{
+            color: red;
+
+        }
+      .box4  .new{
+            height: 420px;
+            width: 350px;
+             padding: 90px 0 0 290px; 
+             font-family: bold;
+            font-size: 22px;
+            letter-spacing: 2px;
+            transform: translateX(-10px);
+            opacity: 0;
+            transition: 0.5s;
+
+        }
+        .box4:hover .new{
+            transform: translateX(20px);
+            opacity: 1;
+           
+        }
+        .box4:hover{
+            background-position: 0;
+        }
+ 
+
+         .box5{
+            height: 300px;
+            width: 700px;
+            background: url('https://nurimetin.github.io/eliteshoppy.github.io/images/bottom4.jpg');
+            margin: 10px 10px;  
+          
+            background-size: 100% 100%;
+            color: white;
+            position: relative;
+             padding: 20px; 
+            background-position: -20px 0;
+            transition: 0.5s;
+        }
+       .box5 .divbg{
+            height: 270px;
+            width: 650px;
+              padding: 10px;  
+             background:linear-gradient(rgba(0, 0, 0, 0.25),rgba(0, 0, 0, 0.25)) ;
+        }
+      .box5 .p{
+            font-size: 30px;
+            letter-spacing: 5px;
+            position: absolute;
+            top: 70px;
+            left: 350px;
+            
+
+        }
+       .box5 .p::first-letter{
+            color: red;
+
+        }
+      .box5  .new{
+            height: 420px;
+            width: 350px;
+             padding: 90px 0 0 290px; 
+             font-family: bold;
+            font-size: 22px;
+            letter-spacing: 2px;
+            transform: translateX(-10px);
+            opacity: 0;
+            transition: 0.5s;
+        }
+        .box5:hover .new{
+            transform: translateX(20px);
+            opacity: 1;
+            }
+        .box5:hover{
+            background-position: 0;
+        }
+
+
+        
+    </style>
+</head>
+
+<body>
+    <div class="top-header">
+        <div class="item">
+             <i class="fas fa-lock"></i>
+             <a href="">Sign In</a>
+        </div>
+<div class="item">
+            <i class="fas fa-edit"></i>
+             <a href="">Sign Up</a>
+        </div>
+        <div class="item">
+              <i class="fas fa-phone"></i>
+             <a href="">Call : 01234567898</a>
+        </div>
+        <div class="item">
+    <i class="fas fa-envelope"></i>
+             <a href="">info@example.com</a>
+        </div>
+    </div>
+    <div class="middle-header">
+      <div class="search-bar">
+         <input type="text" placeholder="Search here..." />
+      <button>🔍</button>
+      </div>
+      <div class="logo">
+        <span>E</span>lite Shoppy
+      </div>
+       <div class="social-icons">
+      <span>Share On :</span>
+      <a href="#" class="social facebook">
+        <div class="front"><i class="fab fa-facebook-f"></i></div>
+        <div class="back"><i class="fab fa-facebook-f"></i></div>
+      </a>
+      <a href="#" class="social twitter">
+        <div class="front"><i class="fab fa-twitter"></i></div>
+        <div class="back"><i class="fab fa-twitter"></i></div>
+      </a>
+      <a href="#" class="social instagram">
+        <div class="front"><i class="fab fa-instagram"></i></div>
+        <div class="back"><i class="fab fa-instagram"></i></div>
+      </a>
+      <a href="#" class="social linkedin">
+        <div class="front"><i class="fab fa-linkedin-in"></i></div>
+        <div class="back"><i class="fab fa-linkedin-in"></i></div>
+      </a>
+    </div>
+    </div>
+    <nav>
+    <div class="nav-container">
+      <ul class="nav-links">
+        <li>
+          <a href="#">Home</a>
+          <div class="line"></div>
+        </li>
+        <li>
+          <a href="#">About</a>
+          <div class="line"></div>
+        </li>
+        <li>
+          <a href="#">Men's wear</a>
+          <div class="line"></div>
+        </li>
+        <li>
+          <a href="#">Women's wear</a>
+          <div class="line"></div>
+        </li>
+        <li>
+          <a href="#">Short Codes</a>
+          <div class="line"></div>
+        </li>
+        <li>
+          <a href="#">Contact</a>
+          <div class="line"></div>
+        </li>
+      </ul>
+      <div class="cart-icon">🛒</div>
+    </div>
+  </nav>
+ <div class="slider">
+    <div class="slide" style="background-image: url('https://nurimetin.github.io/eliteshoppy.github.io/images/banner1.jpg');">
+      <div class="content">
+        <h2>SUMMER <span>COLLECTION</span></h2>
+        <p>New Arrivals On Sale</p>
+        <button>Shop Now</button>
+      </div>
+    </div>
+ </div>
+  <div class="box-container">
+    <div class="box-1">
+       <p class="p">FALL AHED</p>
+       <div class="newarrival"><p>New Arrivals</p></div>
+    </div>
+     <div class="box-2">
+       <p class="p">FALL AHED</p>
+       <div class="newarrival"><p>New Arrivals</p></div>
+    </div>
+    </div>
+ <section class="promo-section">
+    <div class="promo-image">
+      <img src="https://nurimetin.github.io/eliteshoppy.github.io/images/mid.jpg" alt="Shop Window" />
+    </div>
+    <div class="promo-content">
+      <div class="promo-box">
+        <h2>SAVE UP TO <span>50%</span> IN THIS WEEK</h2>
+        <p>Suspendisse varius turpis efficitur erat laoreet dapibus. Mauris sollicitudin scelerisque commodo. Nunc dapibus mauris sed metus finibus posuere.</p>
+        <div class="stats">
+          <div class="stat-item">
+            <i class="fa-regular fa-user"></i>
+            <span class="label">CUSTOMERS</span>
+            <span class="value">653</span>
+          </div>
+          <div class="stat-item">
+            <i class="fa-regular fa-calendar"></i>
+            <span class="label">EVENTS</span>
+            <span class="value">823</span>
+          </div>
+          <div class="stat-item">
+            <i class="fa-regular fa-shield"></i>
+            <span class="label">AWARDS</span>
+            <span class="value">45</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<br>
+<br>
+<br>
+
+
+    <div class="treding">
+        <h1>WHAT'S TRENDING</h1>
+          <div class="card"> 
+      <div class="box3">
+        <div class="divbg">
+             <p class="p">SALL</p>
+       <div class="new"><p>up to 50%</p></div>
+        </div>
+    </div>
+    
+       <div class="twobox">
+          <div class="box4">
+        <div class="divbg">
+             <p class="p">SALL</p>
+       <div class="new"><p>up to 50%</p></div>
+        </div>
+        </div>
+    <br>
+     <div class="box5">
+        <div class="divbg">
+             <p class="p">SALL</p>
+       <div class="new"><p>up to 50%</p></div>
+    </div>
+       </div>
+          
+  </div>
+
+</div>
+          </div>
+  <br>
+  <br>
+  <br>
+  <br>
+   <div class="wrapper">
+    
+    <div class="box" style="background-image: url('https://p.w3layouts.com/demos_new/template_demo/20-06-2017/elite_shoppy-demo_Free/1660570665/web/images/bot_1.jpg');">
+      <div class="effect1"></div>
+      <div class="effect2"></div>
+      <div class="text">Flat <span>50%</span> offer</div>
+    </div>
+
+    <div class="box" style="background-image: url('https://p.w3layouts.com/demos_new/template_demo/20-06-2017/elite_shoppy-demo_Free/1660570665/web/images/bot_2.jpg') ">
+      <div class="effect1"></div>
+      <div class="effect2"></div>
+      <div class="text">Flat <span>50%</span> offer</div>
+    </div>
+
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+   <div class="title">
+    <h2><strong>NEW</strong> ARRIVALS</h2>
+  </div>
+
+  <div class="nav">
+    <a href="#" class="active">MEN'S</a>
+    <a href="#">WOMEN'S</a>
+    <a href="#">BAGS</a>
+    <a href="#">FOOTWEAR</a>
+  </div>
+
+  <div class="table">
+    <div class="tr">
+
+      <div class="td">
+        <img src="https://p.w3layouts.com/demos_new/template_demo/20-06-2017/elite_shoppy-demo_Free/1660570665/web/images/m1.jpg" alt="">
+        <p>Quick View</p>
+        <h4 style="color: #f56262;">Formal Blue Shirt</h4>
+        <div class="price">$45.99 <del>$69.71</del></div>
+        <button class="btn">Add to Cart</button>
+      </div>
+
+      <div class="td">
+        <img src="https://p.w3layouts.com/demos_new/template_demo/20-06-2017/elite_shoppy-demo_Free/1660570665/web/images/m2.jpg" alt="">
+        <p>Quick View</p>
+        <h4 style="color: #f56262;">Gabi Full Sleeve Sweatshirt</h4>
+        <div class="price">$45.99 <del>$69.71</del></div>
+        <button class="btn">Add to Cart</button>
+      </div>
+
+      <div class="td">
+        <img src="https://p.w3layouts.com/demos_new/template_demo/20-06-2017/elite_shoppy-demo_Free/1660570665/web/images/m3.jpg" alt="">
+        <p>Quick View</p>
+        <h4 style="color: #f56262;">Dark Blue Track Pants</h4>
+        <div class="price">$80.99 <del>$89.71</del></div>
+        <button class="btn">Add to Cart</button>
+      </div>
+
+      <div class="td">
+        <img src="https://p.w3layouts.com/demos_new/template_demo/20-06-2017/elite_shoppy-demo_Free/1660570665/web/images/m4.jpg" alt="">
+        <p>Quick View</p>
+        <h4 style="color: #f56262;">Round Neck Black T-Shirt</h4>
+        <div class="price">$190.99 <del>$159.71</del></div>
+        <button class="btn">Add to Cart</button>
+      </div>
+
+    </div>
+        <div class="tr">
+
+      <div class="td">
+        <img src="https://p.w3layouts.com/demos_new/template_demo/20-06-2017/elite_shoppy-demo_Free/1660570665/web/images/m5.jpg" alt="">
+        <p>Quick View</p>
+        <h4 style="color: #f56262;">Men's Black Jeans</h4>
+        <div class="price">$45.99 <del>$69.71</del></div>
+        <button class="btn">Add to Cart</button>
+      </div>
+
+      <div class="td">
+        <img src="https://p.w3layouts.com/demos_new/template_demo/20-06-2017/elite_shoppy-demo_Free/1660570665/web/images/m7.jpg" alt="">
+        <p>Quick View</p>
+        <h4 style="color: #f56262;">Analog Watch</h4>
+        <div class="price">$45.99 <del>$69.71</del></div>
+        <button class="btn">Add to Cart</button>
+      </div>
+
+      <div class="td">
+        <img src="https://p.w3layouts.com/demos_new/template_demo/20-06-2017/elite_shoppy-demo_Free/1660570665/web/images/m6.jpg" alt="">
+        <p>Quick View</p>
+        <h4 style="color: #f56262;">Reversible Belt</h4>
+        <div class="price">$80.99 <del>$89.71</del></div>
+        <button class="btn">Add to Cart</button>
+      </div>
+
+      <div class="td">
+        <img src="https://p.w3layouts.com/demos_new/template_demo/20-06-2017/elite_shoppy-demo_Free/1660570665/web/images/m8.jpg" alt="">
+        <p>Quick View</p>
+        <h4 style="color: #f56262;">Party Men's Blazer</h4>
+        <div class="price">$190.99 <del>$159.71</del></div>
+        <button class="btn">Add to Cart</button>
+      </div>
+
+    </div>
+  </div>
+  <div class="hero">
+    <div class="hero-content">
+      <h1>We Offer Flat <span>40%</span> Discount</h1>
+      <a href="#" class="shop-btn">Shop Now</a>
+    </div>
+  </div>
+  <br>
+  
+   <div class="icon-container">
+    <div class="icon-cart">
+      <div class="icon-box">
+        <i class="fa-solid fa-truck"></i>
+        <div class="effect"></div>
+      </div>
+      <div class="text-box">
+        <h4>FREE SHIPPING</h4>
+        <p>Lorem ipsum dolor sit amet</p>
+      </div>
+    </div>
+
+    <div class="icon-cart">
+      <div class="icon-box">
+        <i class="fa-solid fa-headphones"></i>
+        <div class="effect"></div>
+      </div>
+      <div class="text-box">
+        <h4>24/7 SUPPORT</h4>
+        <p>Lorem ipsum dolor sit amet</p>
+      </div>
+    </div>
+
+    <div class="icon-cart">
+      <div class="icon-box">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <div class="effect"></div>
+      </div>
+      <div class="text-box">
+        <h4>MONEY BACK</h4>
+        <p>Lorem ipsum dolor sit amet</p>
+      </div>
+    </div>
+
+    <div class="icon-cart">
+      <div class="icon-box">
+        <i class="fa-solid fa-gift"></i>
+        <div class="effect"></div>
+      </div>
+      <div class="text-box">
+        <h4>GIFT COUPONS</h4>
+        <p>Lorem ipsum dolor sit amet</p>
+      </div>
+    </div>
+  </div>
+   <div class="footer">
+    <div class="footer-top">
+     
+      <div class="footer-col">
+        <h3><span style="color:#1dc7b8; background:#1dc7b8; color:#fff; padding: 5px 10px;">E</span>lite Shoppy</h3>
+        <p>Lorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora.</p>
+
+       
+        <div class="social-icons">
+          <a href="#" class="twitter">
+            <div class="front"><i class="fab fa-twitter" style="color: #000;"></i></div>
+            <div class="back"><i class="fab fa-twitter"></i></div>
+          </a>
+          <a href="#" class="facebook">
+            <div class="front"><i class="fab fa-facebook-f" style="color: #000;"></i></div>
+            <div class="back"><i class="fab fa-facebook-f"></i></div>
+          </a>
+          <a href="#" class="instagram">
+            <div class="front"><i class="fab fa-instagram" style="color: #000;"></i></div>
+            <div class="back"><i class="fab fa-instagram"></i></div>
+          </a>
+          <a href="#" class="linkedin">
+            <div class="front"><i class="fab fa-linkedin-in" style="color: #000;"></i></div>
+            <div class="back"><i class="fab fa-linkedin-in"></i></div>
+          </a>
+        </div>
+      </div>
+
+    
+      <div class="footer-col">
+        <h3>OUR <span style="color: #fff;">INFORMATION</span></h3>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Men's wear</a></li>
+          <li><a href="#">Women's wear</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Short Codes</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col store-info">
+        <h3>STORE <span style="color: #fff;">INFORMATION</span></h3>
+           <p><i class="fas fa-phone"></i> <strong>Phone Number</strong><br>+1 234 567 8901</p>
+        <p><i class="fas fa-envelope"></i> <strong>Email Address</strong><br>Email: <a href="#" style="color:#1dc7b8;">mail@example.com</a></p>
+        <p><i class="fas fa-location-arrow"></i> <strong>Location</strong><br>Broome St, NY<br>10002, California, USA.</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>FLICKR <span style="color: #fff;">POSTS</span></h3>
+        <div class="flickr">
+          <img src="https://p.w3layouts.com/demos_new/template_demo/20-06-2017/elite_shoppy-demo_Free/1660570665/web/images/t1.jpg" alt="">
+          <img src="https://p.w3layouts.com/demos_new/template_demo/20-06-2017/elite_shoppy-demo_Free/1660570665/web/images/t2.jpg" alt="">
+          <img src="https://p.w3layouts.com/demos_new/template_demo/20-06-2017/elite_shoppy-demo_Free/1660570665/web/images/t3.jpg" alt="">
+          <img src="https://p.w3layouts.com/demos_new/template_demo/20-06-2017/elite_shoppy-demo_Free/1660570665/web/images/t4.jpg" alt="">
+          <img src="https://p.w3layouts.com/demos_new/template_demo/20-06-2017/elite_shoppy-demo_Free/1660570665/web/images/t1.jpg" alt="">
+          <img src="https://p.w3layouts.com/demos_new/template_demo/20-06-2017/elite_shoppy-demo_Free/1660570665/web/images/t2.jpg" alt="">
+          <img src="https://p.w3layouts.com/demos_new/template_demo/20-06-2017/elite_shoppy-demo_Free/1660570665/web/images/t3.jpg" alt="">
+          <img src="https://p.w3layouts.com/demos_new/template_demo/20-06-2017/elite_shoppy-demo_Free/1660570665/web/images/t2.jpg" alt="">
+          <img src="https://p.w3layouts.com/demos_new/template_demo/20-06-2017/elite_shoppy-demo_Free/1660570665/web/images/t4.jpg" alt="">
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="newsletter">
+      <h2>SIGN UP FOR NEWSLETTER!</h2>
+      <form class="newsletter-form">
+        <input type="email" placeholder="Enter your email...">
+        <button type="submit">SUBMIT</button>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
