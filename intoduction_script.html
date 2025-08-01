@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="js">What is Javascript?</h1>
+    <p class="ss">Server side scripting language</p>
+    <p>Client side scripting language</p>
+    <script> 
+        document.write('Yesha')
+        console.log('Hello')
+
+        document.getElementById('js').innerText = "This is introduction of javascript"
+        // document.getElementsByClassName('ss').innerText = "Script Types"
+        document.querySelector('.ss').innerHTML = "<u>Script Types</u>"
+        document.querySelector('h1').innerText = "yesha"
+
+        // alert message
+        alert("Hello my name is Yesha")
+
+        // confirm message
+        confirm('Are you make grid project ?')
+
+        // prompt
+        prompt('Are you 18+')
+
+
+        // 3 types of variable
+        // 1) Var
+        // 2) let
+        // 3) const
+
+        // 1) Var -> In var redeclaration is possible and value reassign is also possible
+        var a;
+        a=10;
+        console.log('a')
+        console.log(a)
+        var a;
+        a=20;
+        console.log(a);
+
+        // 2) let -> In let redeclaration is not possible but value reassign is possible
+        let b;
+        b=50;
+        b=89;
+        console.log('b')
+        console.log(b);
+
+        // 3) const -> In const redeclaration & reassign is not possible
+        const c=100;
+        console.log(c);
+        console.log('c')
+    </script>
+</body>
+</html>
