@@ -1196,7 +1196,7 @@ footer .newsletter .content p{
 
 footer form input{
     display: block;
-    width: 100%;
+    width: 90%;
     margin-top: 1rem;
     border-radius: 2rem;
     padding: 1rem;
@@ -1207,6 +1207,376 @@ footer form input[type="button"]{
     color: white;
     border: none;
     font-size: 1.1rem;
+}
+ 
+@media (max-width: 1200px) {
+  
+  .container {
+    padding: 40px 60px;
+    flex-direction: column; 
+    text-align: center;
+  }
+
+  .container .left,
+  .container .right {
+    max-width: 100%; 
+  }
+
+  .container .right {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+  }
+
+  .container .right img {
+    width: 80%; 
+    height: auto;
+  }
+
+  .section {
+    padding: 40px;
+  }
+
+  .cards {
+    flex-direction: column; 
+    align-items: center;
+  }
+
+  .card {
+    width: 80%;
+    margin-bottom: 20px; 
+  }
+
+  .main-wrapper {
+    flex-direction: column; 
+    padding: 40px 60px;
+  }
+
+  .content-area,
+  .visual-area {
+    width: 100%; 
+    text-align: center;
+  }
+
+  .main-image-container {
+    margin: 40px auto 0; 
+  }
+
+  .page-wrapper {
+    padding: 20px;
+  }
+
+  .product-row {
+    white-space: normal; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+  }
+
+  .product-tile {
+    width: 80%; 
+    margin-right: 0;
+    margin-bottom: 20px; 
+  }
+
+  .special-offer-box {
+    width: 80%;
+    margin-top: 20px;
+  }
+
+  .testimonial-left,
+  .testimonial-right {
+    width: 100%; 
+    display: block; 
+    padding: 0;
+  }
+
+  .testimonial-left img {
+    width: 80%; 
+    margin: 0 auto 30px; 
+  }
+
+  .news-item {
+    flex-direction: column; 
+    display: block;
+  }
+
+  .news-text,
+  .news-image {
+    width: 100%;
+    padding: 0;
+  }
+
+  .news-image {
+    margin-top: 20px; 
+  }
+
+  footer .footer-container {
+    flex-direction: column; 
+  }
+
+  footer .links,
+  footer .newsletter {
+    width: 100%;
+  }
+
+  footer .col-links {
+    flex-direction: column; 
+    align-items: center;
+    text-align: center;
+  }
+
+  footer .contact-us,
+  footer .about-company,
+  footer .useful-links {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero-content h1 {
+    font-size: 48px;
+  }
+
+  .navbar {
+    top: 15px;
+    padding: 10px 20px;
+    gap: 15px;
+  }
+
+  .navbar a {
+    font-size: 12px;
+  }
+
+  .icons {
+    top: 20px;
+    right: 20px;
+    gap: 15px;
+  }
+
+  .section h1,
+  .sale-section h1,
+  h2,
+  .headline,
+  .testimonial-heading h2,
+  .news-section h2,
+  .special-offer-box h2 {
+    font-size: 36px;
+  }
+
+  .product-card {
+    width: 48%; 
+    margin: 1%; 
+  }
+
+  .items-container {
+    flex-direction: column; 
+    align-items: center; 
+  }
+
+  .items-container .card {
+    width: 80%; 
+  }
+
+  .scrolling-line h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .top-bar {
+    flex-direction: column; 
+    text-align: center;
+    padding: 10px;
+  }
+
+  .top-bar .right {
+    margin-top: 10px;
+
+  .hero {
+    height: 500px;
+  }
+
+  .hero-content h1 {
+    font-size: 36px;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+  }
+
+  .navbar {
+    width: 90%;
+    flex-wrap: wrap;
+    justify-content: center; 
+    top: 10px;
+  }
+
+  .navbar a {
+    padding: 5px 8px;
+  }
+
+  .container {
+    padding: 30px;
+  }
+
+  .sale-section {
+    padding: 30px;
+  }
+
+  .product-card {
+    width: 98%;
+  }
+
+  .products-wrapper .product-card {
+    width: 98%; 
+  }
+
+  .hero-section .hero-content .heading {
+    font-size: 48px;
+  }
+
+  .main-wrapper {
+    padding: 30px;
+  }
+
+  .scrolling-line img {
+    width: 150px;
+    height: 75px;
+  }
+
+  .scrolling-line h1 {
+    font-size: 2.5rem;
+  }
+
+  .testimonial-heading h2,
+  .news-section h2 {
+    font-size: 32px;
+  }
+
+  .testimonial-left img {
+    width: 100%; 
+  }
+
+  footer .social-media .media {
+    flex-direction: column; 
+    align-items: flex-start;
+  }
+
+  footer .col-links {
+    padding: 1rem;
+  }
+
+  footer .newsletter .content h2 {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+
+  footer .newsletter .content p {
+    font-size: 1rem;
+  }
+}
+}
+@media (max-width: 480px) {
+
+  .hero-content h1 {
+    font-size: 28px;
+  }
+
+  .hero-content .btn {
+    padding: 8px 20px;
+  }
+
+  .navbar {
+    gap: 10px;
+  }
+
+  .section h1,
+  .sale-section h1,
+  h2,
+  .headline,
+  .testimonial-heading h2,
+  .news-section h2,
+  .special-offer-box h2 {
+    font-size: 28px;
+  }
+
+  .container .right img {
+    width: 100%;
+  }
+
+  .product-tile {
+    width: 100%; 
+    margin-right: 0;
+  }
+
+  .special-offer-box {
+    padding: 20px;
+  }
+
+  .special-offer-box h2 {
+    font-size: 40px;
+  }
+
+  .hero-section .hero-content .heading {
+    font-size: 36px;
+  }
+
+  .video-play-button .circle-button {
+    width: 80px;
+    height: 80px;
+  }
+
+  .scrolling-line h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .hero-content h1 {
+    font-size: 24px;
+  }
+
+  .navbar {
+    padding: 5px;
+  }
+
+  .navbar a {
+    font-size: 10px;
+    padding: 3px 5px;
+  }
+
+  .section h1,
+  .sale-section h1,
+  h2,
+  .headline,
+  .testimonial-heading h2,
+  .news-section h2,
+  .special-offer-box h2 {
+    font-size: 24px;
+  }
+
+  .scrolling-line img {
+    width: 100px;
+    height: 50px;
+  }
+
+  .scrolling-line h1 {
+    font-size: 1.5rem;
+  }
+
+  .testimonial-heading .stats {
+    font-size: 14px;
+  }
+
+  .news-title {
+    font-size: 20px;
+  }
+
+  footer .newsletter .content h2 {
+    font-size: 1.5rem;
+  }
 }
   </style>
 </head>
@@ -1508,7 +1878,7 @@ footer form input[type="button"]{
 
     <div class="visual-area">
       <div class="main-image-container">
-        <img src="https://demo2.pavothemes.com/aunuca/wp-content/uploads/2025/04/h1-blend01.jpg" alt="Open drawer table" />
+       
       </div>
       <img class="overlay-image" src="https://m.media-amazon.com/images/I/71iqAf373UL._AC_SX679_.jpg" alt="Side table with vase" />
     </div>
