@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .h1{
+           color: red;
+        }
+        .h2 {
+            background-color: darkcyan;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="h1">Yesha</h1>
+    <h1 id="h2" >Aryanti</h1>
+    <script>
+        //hover
+        document.querySelector('h1').title = "Yesha"
+
+        document.getElementById('h1').innerText = "Aryanti"
+
+        //call class by id using #
+        document.querySelector("#h2").innerText = "Sneha"
+
+        
+        //call the class dynamically
+document.querySelector('#h2').className = "h1 h2"
+        
+
+        </script>
+
+</body>
+</html>
