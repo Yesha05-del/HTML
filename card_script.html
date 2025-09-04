@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .row{
+            display: flex;
+        }
+        .col{
+            /* display: flex; */
+            border: 2px solid black;
+        }
+        img{
+            width: 250px;
+        }
+    </style>
+</head>
+<body>
+    <div class="row">
+        <!-- <div class="col">
+            <img src="https://images.stockcake.com/public/d/2/8/d289ec1f-7dfc-41ff-97b3-8b9636c2d760_large/peacock-displays-feathers-stockcake.jpg" alt="" width="100%">
+            <h1>Peacock</h1>
+            <p>It is peacock</p>
+            <p>12rs</p>
+        </div> -->
+    </div>
+<script>
+  let   row123 = document.querySelector('.row')
+    let x = ""
+    for(i=1;i<=3;i++){
+        x=x + '<div class="col">  <img src="https://images.stockcake.com/public/d/2/8/d289ec1f-7dfc-41ff-97b3-8b9636c2d760_large/peacock-displays-feathers-stockcake.jpg" alt="" width="100%">  <h1>Peacock</h1>  <p>It is peacock</p> <p>12rs</p>' 
+        
+    }
+row123.innerHTML=x;
+</script>
+</body>
+</html>

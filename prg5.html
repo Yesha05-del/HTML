@@ -1,18 +1,20 @@
-<!-- print element of an array -->
- <!DOCTYPE html>
- <html lang="en">
- <head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
- </head>
- <body>
-    <script>
-        let arr = [10,20,30,40];
-        for(let i=0;i<arr.length;i++){
-            document.write(arr[i])
-            document.write("<br>")
+</head>
+<body>
+     <script>
+        num=prompt("Enter Number")
+           if((num%5==0) && (num%3==0)){
+document.write('Number is divisible by both 3 & 5')
         }
-    </script>
- </body>
- </html>
+       
+        else{
+            document.write('Number is not divisible by 3 & 5')
+        }
+        </script>
+</body>
+</html>
