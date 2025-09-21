@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+<h2>Mouse event</h2>
+1)mouseover
+2)out
+3)Click
+4)Dbclick
+
+<h2>Keyboard Events</h2>
+1)keyup
+2)Keydown
+3)Keypress
+
+
+<h2>form Event</h2>
+1)Submit
+2)Blur
+3)Focus
+
+<!-- <input type="text" name="" id="" onfocus="test()"> -->
+ <input type="text" name="" id="" onabort="test()">
+
+
+<!-- <input type="text" name="" id=""> -->
+ <!-- <button onkeydown="test()">Add</button> -->
+  <button onkeyup="test()">Add</button>
+   <!-- <button onkeypress="test()">Add</button> -->
+
+
+<!-- <button onclick="test()">Add</button> -->
+ <!-- <button ondblclick="test()">Add</button> -->
+  <!-- <button onmouseenter="test()">Add</button> -->
+   <!-- <button onmouseleave="test()">Add</button> -->
+    <!-- <button onmousewheel="test()">Add</button> -->
+     <!-- <button onclick="test()">Add</button> -->
+<script>
+//  function test(){
+//     alert(event.type)
+//  }
+ak = document.querySelector('input')
+
+function test(){
+    alert(event.type)
+}
+// function test(){
+//     alert(event.type)
+// }
+
+</script>
+</body>
+</html>
