@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     
+    </style>
+</head>
+<body>
+  <p id="text">Yesha</p>
+
+<button id="redBtn">Red</button>
+<button id="blueBtn">Blue</button>
+<button id="greenBtn">Green</button>
+
+<script>
+let text = document.getElementById("text");
+
+document.getElementById("redBtn").addEventListener("click", () => text.style.color = "red");
+document.getElementById("blueBtn").addEventListener("click", () => text.style.color = "blue");
+document.getElementById("greenBtn").addEventListener("click", () => text.style.color = "green");
+</script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text"><span></span>
+
+    <script>
+        let a = document.querySelector("input")
+        let b = document.querySelector('span')
+        a.addEventListener('blur',function(){
+let num = Number(a.value);
+if(num%2==0){
+          b.innerHTML = "Even"
+}
+else{
+    b.innerHTML="Odd"
+}
+        })
+        </script>
+</body>
+</html>

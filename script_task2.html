@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  <input id="txt">
+  <button onclick="count()">Count</button>
+  <p id="result"></p>
+
+  <script>
+    function count() {
+      let text = document.getElementById("txt").value;
+      let count = text.length;
+      document.getElementById("result").innerText =  count;
+    }
+  </script>
+</body>
+</html>
