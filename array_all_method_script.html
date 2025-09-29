@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Array Methods Example</title>
+</head>
+<body>
+<script>
+let arr = [10, 20, 30, 40, 50];
+
+// 1. length → returns number of elements
+document.write("Length: " + arr.length + "<br>");
+
+// 2. toString() → converts array to string
+document.write("toString: " + arr.toString() + "<br>");
+
+// 3. at() → returns element at given index
+document.write("at(2): " + arr.at(2) + "<br>");
+
+// 4. join() → joins elements with separator
+document.write("join: " + arr.join(" - ") + "<br>");
+
+// 5. pop() → removes last element
+arr.pop();
+document.write("pop: " + arr + "<br>");
+
+// 6. push() → adds element at end
+arr.push(60);
+document.write("push: " + arr + "<br>");
+
+// 7. shift() → removes first element
+arr.shift();
+document.write("shift: " + arr + "<br>");
+
+// 8. unshift() → adds element at beginning
+arr.unshift(5);
+document.write("unshift: " + arr + "<br>");
+
+// 9. delete → deletes element at index (leaves empty slot)
+delete arr[1];
+document.write("delete index 1: " + arr + "<br>");
+
+// 10. concat() → joins two arrays
+let arr2 = [70, 80];
+document.write("concat: " + arr.concat(arr2) + "<br>");
+
+// 11. copyWithin() → copies part of array to another place in same array
+let nums = [1, 2, 3, 4, 5];
+nums.copyWithin(1, 3); 
+document.write("copyWithin: " + nums + "<br>");
+
+// 12. flat() → flattens nested arrays
+let nested = [1, [2, [3, 4]]];
+document.write("flat: " + nested.flat(2) + "<br>");
+
+// 13. slice() → extracts portion without changing original
+let fruits = ["apple", "banana", "mango", "orange"];
+document.write("slice: " + fruits.slice(1, 3) + "<br>");
+
+// 14. splice() → removes/replaces/adds elements (changes original)
+fruits.splice(2, 1, "grapes");
+document.write("splice: " + fruits + "<br>");
+
+// 15. toSpliced() → new array after splice (does NOT change original)
+let newFruits = fruits.toSpliced(1, 2, "kiwi");
+document.write("toSpliced: " + newFruits + "<br>");
+document.write("original fruits: " + fruits + "<br>");
+</script>
+</body>
+</html>
