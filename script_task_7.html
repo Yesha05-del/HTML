@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p class="price">
+    Shirt Price : <span id="total">300</span>
+  </p>
+
+  <select id="option">
+    <option value="1">1</option>
+    <option value="2">2</option>
+  </select>
+
+  <script>
+    let totalSpan = document.getElementById("total");
+    let select = document.getElementById("option");
+    let basePrice = 300;
+
+    select.addEventListener("change", function () {
+      let quantity = this.value;
+      let total = 0;
+
+      if (quantity == "1") {
+        total = basePrice * 1;
+      } 
+      else if (quantity == "2") {
+        total = basePrice * 2;
+      } 
+      else {
+        total = basePrice; 
+      }
+
+
+      totalSpan.innerHTML = total;
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <img src="images/dog_1.jpeg" alt="">
+</body>
+<script>
+ let img = document.querySelector('img')
+  console.log(img.src)
+  function slider(){
+    if(img.src.match("images/dog_1.jpeg")){
+      img.src="images/dog_2.jpeg"
+    }
+    else if(img.src.match('images/dog_2.jpeg')){
+      img.src="images/dog_3.jpeg"
+    }
+    else{
+      img.src="images/dog_1.jpeg"
+    }
+  }
+  setInterval(slider,1000)
+</script>
+</html>

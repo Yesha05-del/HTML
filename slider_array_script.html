@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="images/dog_1.jpeg" alt="" width="400px">
+</body>
+<script>
+    let img=document.querySelector("img");
+
+    let images =[
+        "images/dog_1.jpeg",
+        "images/dog_2.jpeg",
+        "images/dog_3.jpeg"
+    ];
+    let index=0
+
+    function slider(){
+        for(let i=0;i<images.length;i++){
+            if(i===index){
+                img.src=images[i];
+            }
+        }
+        index++;
+        if(index >= images.length){
+            index=0;
+        }
+    }
+    setInterval(slider,1000);
+
+</script>
+</html>
