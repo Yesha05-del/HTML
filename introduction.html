@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <h1>What is jquery ?</h1>
+   <button id="b1">Hide</button>
+   <button id="b2">Show</button>
+   <button id="b3">toogle</button>
+
+   <script>
+    // $(document).click(()=>{
+    //     $('h1').hide(slow)
+    // })
+        $('#b1').click(()=>{
+        $('h1').hide(slow)
+    })
+    $('#b2').click(()=>{
+        $('h1').show('medium')
+    })
+    $("#b3").click(()=>{
+        $('h1').toggle('fast')
+    })
+   </script>
+</body>
+</html>

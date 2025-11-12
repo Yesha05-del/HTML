@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Netflix FAQ</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+  <h2>What is Netflix? <i class="fa-solid fa-plus"></i></h2>
+  <p id="answer" style="display:none;">
+    Netflix is a streaming service that offers a wide variety of award-winning TV shows,
+    movies, anime, documentaries, and more.
+  </p>
+
+  <script>
+    $(document).ready(function(){
+      $("h2").click(function(){
+        $("#answer").slideToggle(); 
+        $(this).find("i").toggleClass("fa-plus fa-minus"); 
+      });
+    });
+  </script>
+</body>
+</html>
