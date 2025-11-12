@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>India Travel Website</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="shortcut icon" href="images/India at a Glance.jpg">
+  <style>
+    /* Navbar background */
+    .navbar {
+      background: rgba(0, 0, 0, 0.7);
+    }
+
+    /* Nav link style */
+    .navbar-nav .nav-link {
+      position: relative;
+      color: #fff !important;
+      margin: 0 12px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      transition: color 0.3s ease;
+    }
+
+    /* Underline effect */
+    .navbar-nav .nav-link::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 0%;
+      height: 2px;
+      background: linear-gradient(to right, #FF9933, #138808);
+      transition: width 0.4s ease;
+    }
+
+    /* On hover */
+    .navbar-nav .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: #FFD580 !important;
+    }
+
+    /* Active link always underlined */
+    .navbar-nav .nav-link.active::after {
+      width: 100%;
+    }
+
+    /* page Section */
+.page{
+  height: 100vh;
+  background: url('home/home1\ \(2\).png') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  position: relative;
+}
+
+.page .overlay {
+  max-width: 700px;
+  color: white;
+}
+
+.page h3.tagline {
+  background: rgba(255, 255, 255, 0.2);
+  display: inline-block;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+.page h1 {
+  font-size: 55px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.page p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  transition: 0.3s;
+}
+
+
+.btn.blue   { background: #007bff; }
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.page3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+  height: 425px;
+  background: linear-gradient(to right, #73bbab, #286452);
+  color: white;
+}
+
+.page3 .left {
+  max-width: 500px;
+}
+
+.page3 h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+.page3 p {
+  font-size: 1rem;
+  margin-bottom: 25px;
+}
+
+.page3 button {
+  background: rgb(240, 101, 1);
+  color: #f7f4f4;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.page3 .right {
+  position: relative;
+}
+
+.page3 img {
+  max-width: 390px;
+  position: relative;
+  z-index: 2;
+}
+
+.footer {
+      background: black;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .footer-links {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+    .footer-links div {
+      min-width: 150px;
+      margin: 10px;
+    }
+    .footer-links h4 {
+      margin-bottom: 10px;
+      font-weight: bold;
+      color: white;
+    }
+    .footer-links a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      margin: 5px 0;
+    }
+    .footer-links a:hover {
+      text-decoration: underline;
+      color: #fff;
+    }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.2);
+      padding-top: 10px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sticky Navbar -->
+<nav class="navbar navbar-expand-lg shadow-sm sticky-top" style="background: rgba(0, 0, 0, 0.7); z-index: 1030;">
+  <div class="container">
+    
+    <!-- Logo and Title -->
+    <a class="navbar-brand fw-bold d-flex align-items-center" href="#" 
+       style="font-size: 25px;
+              font-weight: bold;
+              background: linear-gradient(to right, #ed861f 0%, rgb(219, 218, 218) 50%, #1ab50c 100%);
+              -webkit-background-clip: text;
+              background-clip: text;
+              -webkit-text-fill-color: transparent;
+              text-transform: uppercase;
+              letter-spacing: 2px;">
+      <img src="images/India at a Glance.jpg" alt="Logo" class="me-2" width="50" height="50">
+      DESI ROOT OF INDIA
+    </a>
+
+    <!-- Mobile Toggle -->
+    <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar Links -->
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link text-light" href="bootstrap_psd.html" style="font-size: 17px;">Home</a></li>
+        <li class="nav-item"><a class="nav-link text-light" href="About.html" style="font-size: 17px;">About</a></li>
+        <li class="nav-item"><a class="nav-link text-light" href="Package.html" style="font-size: 17px;">Packages</a></li>
+        <li class="nav-item"><a class="nav-link text-light" href="Contact.html" style="font-size: 17px;">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Button -->
+    <div class="d-flex">
+      <a href="registration.html" class="btn text-white" 
+         style="background: #FF6600;
+                padding: 10px 20px;
+                border-radius: 25px;
+                font-weight: bold;
+                transition: 0.3s ease;
+                text-decoration: none;">
+        Registration
+      </a>
+    </div>
+  </div>
+</nav>
+
+   <section class="page">
+    <div class="overlay"><br><br><br>
+      <h3 class="tagline">EXPERIENCE LUXURY TRAVEL</h3>
+      <h1>Explore the India <br> Like Never Before</h1>
+      <p>
+        Curated journeys to the India's most extraordinary destinations.  
+        Let us transform your travel dreams into unforgettable memories.
+      </p>
+
+      <div class="buttons">
+       
+         <a href="Package.html" class="btn blue">Plan Your Trip</a>
+        
+      </div>
+    </div>
+  </section>
+<!-- Cards Section -->
+<div class="container my-5">
+  <div class="d-flex flex-wrap justify-content-center align-items-center gap-4 p-4">
+    
+    <div class="card shadow-lg border-0" style="width: 18rem; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+      <img src="home/historical.png" class="card-img-top" alt="historical">
+      <div class="card-body">
+        <p class="card-text">India’s historical richness includes iconic structures like the Taj Mahal, Red Fort, Qutub Minar, Ajanta & Ellora Caves, and the majestic forts of Rajasthan.</p>
+      </div>
+    </div>
+
+    <div class="card shadow-lg border-0" style="width: 18rem; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+      <img src="home/wildlife.png" class="card-img-top" alt="wildlife">
+      <div class="card-body">
+        <p class="card-text">India offers diverse wildlife in sanctuaries like Ranthambore, Kaziranga, Gir, Jim Corbett, and Sundarbans – home to Bengal tigers, elephants, and rhinos.</p>
+      </div>
+    </div>
+
+    <div class="card shadow-lg border-0" style="width: 18rem; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+      <img src="home/neture (1).png" class="card-img-top" alt="nature">
+      <div class="card-body">
+        <p class="card-text">From Himalayan peaks to Kerala backwaters, India’s landscapes include lush forests, rivers, waterfalls, deserts, and serene lakes like Pangong and Dal.</p>
+      </div>
+    </div>
+
+    <div class="card shadow-lg border-0" style="width: 18rem; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+      <img src="home/culture.png" class="card-img-top" alt="culture">
+      <div class="card-body">
+        <p class="card-text">India’s cultural diversity is reflected in its festivals, traditions, music, dance, temples, and architectural marvels – offering a vibrant heritage experience.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<section class="page3">
+  
+    <div class="left">
+      <h1>Ready to Start Your Adventure?</h1>
+      <p>Let us help you create the perfect journey. Our travel experts are ready to craft your dream vacation.</p>
+      <a href="booking.html"><button>Start Planning</button></a>
+    </div>
+    <div class="right">
+      <div class="airplane-path"></div>
+      <img src="home/home3.png" alt="Traveler">
+    </div>
+  </div></section>
+
+   <footer style="background-color: black;">
+    <div class="footer-links">
+      <div>
+        <h4>Quick Links</h4>  
+        <a href="bootstrap_psd.html">Home</a>
+        <a href="About.html">About</a>
+        <a href="Package.html">Packages</a>
+        <a href="Contact.html">Contact</a>
+      </div>
+      <div>
+        <h4>Contact</h4>  
+        <p style="color: white;">Gala Empire,<br>opp. Doordarshan Tower,<br>Thaltej, 380054-Ahmedabad,<br>Gujarat</p>
+        <p style="color: white;">📞 +91 1234567890</p>
+        <p style="color: white;">✉️ desiroutes@gmail.com</p>
+      </div>
+      <div>
+        <h4>Follow Us</h4>  
+        <a href="https://www.instagram.com/desi_routes?igsh=MWJsdnpuaXF3Z244NA==" target="_blank">
+          <i class="fa-brands fa-square-instagram" style="color: #e70d4f;"></i> Instagram
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Travel Agency</p>
+    </div>
+  </footer>
+ <nav aria-label="Page navigation example">
+  <ul class="pagination">
+    <li class="page-item"><a class="page-link" href="bootstrap_psd.html">Previous</a></li>
+    <li class="page-item"><a class="page-link" href="About.html">1</a></li>
+    <li class="page-item"><a class="page-link" href="Package.html">2</a></li>
+    <li class="page-item"><a class="page-link" href="Contact.html">3</a></li>
+  
+  </ul>
+</nav>
+
+</body>
+</html>

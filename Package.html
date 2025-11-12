@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>India Travel Website</title>
+    <title>India Travel Website</title>
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
    <link rel="shortcut icon" href="images/India at a Glance.jpg">
 </head>
 <style>
-            .hero {
-  background: url('images/contact_ocean.jpg') ;
-  height: 650px;
+      .hero {
+  background: url('images/pkg.jpg') ;
+  height: 700px;
   position: relative;
   color: #fff;
   padding-bottom: 200px;
@@ -75,40 +75,52 @@
   margin-bottom: 20px;
 }
 .hero-content h1 {
-  font-size: 62px;
+  font-size: 70px;
   font-weight: bold;
   line-height: 1.3;
 }
 
-    .contact-section {
-      background: #fff;
-      padding: 60px 100px;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      margin: 50px 0;
+ .package-card {
+      border: none;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .form-control:focus {
-      border-color: #0d6efd;
-      box-shadow: none;
+    .package-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     }
 
-    .btn-custom {
-      background-color: #0d6efd;
+    .card-img-top {
+      height: 220px;
+      object-fit: cover;
+    }
+
+   
+    .btn-orange {
+      background-color: #ff6600;
       color: white;
+      font-weight: 600;
+      border-radius: 10px;
+      padding: 8px 18px;
+      border: none;
       transition: 0.3s;
     }
 
-    .btn-custom:hover {
-      background-color: #0b5ed7;
+    .btn-orange:hover {
+      background-color: #e85b00;
+      color: white;
     }
 
-    @media (max-width: 768px) {
-      .contact-section {
-        padding: 30px;
-      }
+    .price-info {
+      border-top: 1px solid #eee;
+      padding-top: 12px;
+      margin-top: 10px;
+      font-size: 15px;
     }
-    
+
        .page3 {
   display: flex;
   align-items: center;
@@ -235,52 +247,97 @@
     </div>
   </nav>
     <div class="hero-content">
-      <button class="btn-outline">Contact US</button>
+      <button class="btn-outline">Our Packages</button>
       <br>
       <br>
-      <h1 >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Ready to Explore? <br> Contact Us!</h1>
+      <h1 >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Discover  Your<br> &nbsp; &nbsp; &nbsp; Perfect Adventure</h1>
     </div>
     </header>
 
-    <div class="container-fluid">
-    <div class="contact-section">
-      <h2 class="text-center text-primary mb-4">Contact Us</h2>
-      <form>
-        <div class="row mb-3">
-          <div class="col-md-6">
-            <label for="name" class="form-label">Full Name</label>
-            <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
-          </div>
-          <div class="col-md-6">
-            <label for="email" class="form-label">Email Address</label>
-            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
-          </div>
-        </div>
+    <div class="container my-5">
+  <h1 class="text-center fw-bold mb-5" style="font-size: 45px;">Popular Travel Packages</h1>
 
-        <div class="row mb-3">
-          <div class="col-md-6">
-            <label for="phone" class="form-label">Phone Number</label>
-            <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number">
+  <div class="row justify-content-center g-4">
+    <!-- Card 1 -->
+    <div class="col-lg-4 col-md-6 d-flex justify-content-center">
+      <div class="card package-card" style="width: 22rem;">
+        <div class="position-relative">
+          <img src="images/jatayu arth.jpg" class="card-img-top" alt="jatayu">
+          
+        </div>
+        <div class="card-body">
+          <h5 class="card-title fw-bold">Jatayu Arth</h5>
+          <p class="text-muted mb-1"><i class="bi bi-geo-alt-fill text-warning"></i> Jatayu Arth ,India</p>
+          <p class="card-text">
+           A monumental sculpture and adventure park in Kerala, featuring the world’s largest bird statue symbolizing Jatayu’s bravery from the Ramayana.
+          </p>
+          <div class="price-info d-flex justify-content-between align-items-center">
+            <span><i class="bi bi-clock text-warning"></i> 5 Nights / 6 Days</span>
+            <span><i class="bi bi-currency-rupee text-warning"></i>29,999 / person</span>
           </div>
-          <div class="col-md-6">
-            <label for="subject" class="form-label">Subject</label>
-            <input type="text" class="form-control" id="subject" placeholder="Enter subject">
+          <div class="d-flex justify-content-between mt-3">
+          <a href="booking.html"><button class="btn btn-orange"> Book Now</button></a>  
+            
           </div>
         </div>
+      </div>
+    </div>
 
-        <div class="mb-3">
-          <label for="message" class="form-label">Message</label>
-          <textarea class="form-control" id="message" rows="5" placeholder="Write your message here..." required></textarea>
+    <!-- Card 2 -->
+    <div class="col-lg-4 col-md-6 d-flex justify-content-center">
+      <div class="card package-card" style="width: 22rem;">
+        <div class="position-relative">
+          <img src="more_pkg img/coonoor.png" class="card-img-top" alt="connor">
+         
         </div>
+        <div class="card-body">
+          <h5 class="card-title fw-bold">Connor</h5>
+          <p class="text-muted mb-1"><i class="bi bi-geo-alt-fill text-warning"></i> Connor,TamilNadu</p>
+          <p class="card-text">
+          A charming hill station located in the Nilgiri Hills in the southern Indian state of Tamil Nadu
+          
+          
+          </p>
+          <div class="price-info d-flex justify-content-between align-items-center">
+            <span><i class="bi bi-clock text-warning"></i> 7 Days / 6 Nights</span>
+            <span><i class="bi bi-currency-rupee text-warning"></i>40,000 / person</span>
+          </div>
+          <div class="d-flex justify-content-between mt-3">
+            <a href="booking.html"><button class="btn btn-orange"> Book Now</button></a>  
+       
+          </div>
+        </div>
+      </div>
+    </div>
 
-        <div class="text-center">
-          <button type="submit" class="btn btn-custom px-5 py-2">Send Message</button>
+    <!-- Card 3 -->
+    <div class="col-lg-4 col-md-6 d-flex justify-content-center">
+      <div class="card package-card" style="width: 22rem;">
+        <div class="position-relative">
+          <img src="more_pkg img/Darjeeling.jpg" class="card-img-top" alt="Darjeeling">
+          
         </div>
-      </form>
+        <div class="card-body">
+          <h5 class="card-title fw-bold">Darjeeling</h5>
+          <p class="text-muted mb-1"><i class="bi bi-geo-alt-fill text-warning"></i>Darjeeling,West Bengal</p>
+          <p class="card-text">
+            Experience the serene backwaters and lush greenery of God's Own Country with houseboat stays and Ayurvedic treatments.
+          </p>
+          <div class="price-info d-flex justify-content-between align-items-center">
+            <span><i class="bi bi-clock text-warning"></i> 5 Days / 4 Nights</span>
+            <span><i class="bi bi-currency-rupee text-warning"></i>25,000 / person</span>
+          </div>
+          <div class="d-flex justify-content-between mt-3">
+            <a href="booking.html"><button class="btn btn-orange"> Book Now</button></a>  
+          
+          </div>
+        </div>
+      </div>
     </div>
   </div>
+</div>
 
-  <section class="page3" >
+<section class="page3" >
   
     <div class="left">
       <h1>Ready to Start Your Adventure?</h1>
@@ -297,7 +354,7 @@
     <div class="footer-links">
       <div>
         <h4>Quick Links</h4>  
-         <a href="bootstrap_psd.html">Home</a>
+        <a href="bootstrap_psd.html">Home</a>
         <a href="About.html">About</a>
         <a href="Package.html">Packages</a>
         <a href="Contact.html">Contact</a>
@@ -319,6 +376,7 @@
       <p>© 2025 Travel Agency</p>
     </div>
   </footer>
+
 <nav aria-label="Page navigation example">
   <ul class="pagination">
     <li class="page-item"><a class="page-link" href="bootstrap_psd.html">Previous</a></li>
